@@ -14,5 +14,8 @@ Website/src/.vuepress/.temp
 Website/src/.vuepress/.cache
 
 
+FluentTune/bin/
+FluentTune/obj/
+
 FluentTune.WinUI/bin/
 FluentTune.WinUI/obj/
