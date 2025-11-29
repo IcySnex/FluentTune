@@ -9,7 +9,18 @@
     NavigationCacheMode="Required"
     mc:Ignorable="d">
 
-    <Grid>
-        <TextBlock Text="Settings" />
+    <Grid Padding="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="8" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Style="{StaticResource PageTitleTextBlockStyle}" Text="Settings" />
+
+        <Button
+            Grid.Row="2"
+            Command="{x:Bind vm.ChangeThemeCommand}"
+            Content="Apply Theme" />
     </Grid>
 </Page>

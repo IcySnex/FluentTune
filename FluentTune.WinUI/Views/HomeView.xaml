@@ -9,7 +9,152 @@
     NavigationCacheMode="Required"
     mc:Ignorable="d">
 
-    <Grid>
-        <TextBlock Text="Home" />
-    </Grid>
+    <ScrollViewer>
+        <StackPanel Padding="24" Spacing="16">
+            <TextBlock Style="{StaticResource PageTitleTextBlockStyle}" Text="Home" />
+
+            <!--  Buttons  -->
+            <StackPanel Spacing="8">
+                <TextBlock FontSize="20" Text="Buttons" />
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <Button Content="Standard" />
+                    <Button Content="Accent" Style="{StaticResource AccentButtonStyle}" />
+                    <ToggleButton Content="Toggle Button" />
+                    <HyperlinkButton Content="Hyperlink Button" NavigateUri="https://example.com" />
+                </StackPanel>
+            </StackPanel>
+
+
+            <!--  Text Inputs  -->
+            <StackPanel Spacing="8">
+                <TextBlock FontSize="20" Text="Text Inputs" />
+                <TextBox
+                    Width="300"
+                    HorizontalAlignment="Left"
+                    Header="Standard TextBox"
+                    PlaceholderText="Enter text..." />
+                <PasswordBox
+                    Width="300"
+                    HorizontalAlignment="Left"
+                    Header="PasswordBox" />
+                <AutoSuggestBox
+                    Width="300"
+                    HorizontalAlignment="Left"
+                    Header="AutoSuggestBox"
+                    PlaceholderText="Type here..." />
+                <NumberBox
+                    Width="150"
+                    HorizontalAlignment="Left"
+                    Header="NumberBox"
+                    Value="42" />
+                <RichEditBox
+                    Width="300"
+                    Height="120"
+                    HorizontalAlignment="Left"
+                    Header="RichEditBox" />
+            </StackPanel>
+
+
+            <!--  Sliders & Progress  -->
+            <StackPanel Spacing="8">
+                <TextBlock FontSize="20" Text="Sliders &amp; Progress" />
+                <Slider
+                    Width="300"
+                    HorizontalAlignment="Left"
+                    Maximum="100"
+                    Minimum="0"
+                    Value="60" />
+                <ProgressBar
+                    Width="300"
+                    HorizontalAlignment="Left"
+                    Maximum="100"
+                    Minimum="0"
+                    Value="40" />
+                <ProgressRing
+                    Width="40"
+                    Height="40"
+                    HorizontalAlignment="Left"
+                    IsActive="True" />
+            </StackPanel>
+
+
+            <!--  Checkboxes & Radios  -->
+            <StackPanel Spacing="8">
+                <TextBlock FontSize="20" Text="Checkboxes &amp; RadioButtons" />
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                    <CheckBox Content="CheckBox 1" />
+                    <CheckBox Content="CheckBox 2" IsChecked="True" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                    <RadioButton Content="Option A" />
+                    <RadioButton Content="Option B" />
+                    <RadioButton Content="Option C" IsChecked="True" />
+                </StackPanel>
+            </StackPanel>
+
+
+            <!--  ComboBox & Menu  -->
+            <StackPanel Spacing="8">
+                <TextBlock FontSize="20" Text="ComboBox &amp; Menu" />
+                <ComboBox Width="250">
+                    <ComboBoxItem Content="Item 1" />
+                    <ComboBoxItem Content="Item 2" />
+                    <ComboBoxItem Content="Item 3" />
+                </ComboBox>
+                <MenuBar>
+                    <MenuBarItem Title="File">
+                        <MenuFlyoutItem Text="New" />
+                        <MenuFlyoutItem Text="Open" />
+                        <MenuFlyoutSeparator />
+                        <MenuFlyoutItem Text="Exit" />
+                    </MenuBarItem>
+                    <MenuBarItem Title="Edit">
+                        <MenuFlyoutItem Text="Copy" />
+                        <MenuFlyoutItem Text="Paste" />
+                    </MenuBarItem>
+                </MenuBar>
+            </StackPanel>
+
+
+            <!--  Toggle Switches  -->
+            <StackPanel Spacing="8">
+                <TextBlock FontSize="20" Text="Toggle Controls" />
+                <ToggleSwitch Header="ToggleSwitch A" />
+                <ToggleSwitch Header="ToggleSwitch B" IsOn="True" />
+            </StackPanel>
+
+
+            <!--  Lists  -->
+            <StackPanel Spacing="8">
+                <TextBlock FontSize="20" Text="Lists" />
+                <ListView
+                    Width="300"
+                    Height="150"
+                    HorizontalAlignment="Left">
+                    <ListViewItem Content="List Item 1" />
+                    <ListViewItem Content="List Item 2" />
+                    <ListViewItem Content="List Item 3" />
+                </ListView>
+                <GridView
+                    Width="300"
+                    Height="150"
+                    HorizontalAlignment="Left">
+                    <GridViewItem Content="Grid Item A" />
+                    <GridViewItem Content="Grid Item B" />
+                    <GridViewItem Content="Grid Item C" />
+                </GridView>
+            </StackPanel>
+
+
+            <!--  Misc Controls  -->
+            <StackPanel Spacing="8">
+                <TextBlock FontSize="20" Text="Misc Controls" />
+                <CalendarDatePicker />
+                <TimePicker />
+                <ColorPicker HorizontalAlignment="Left" />
+            </StackPanel>
+
+
+        </StackPanel>
+    </ScrollViewer>
 </Page>

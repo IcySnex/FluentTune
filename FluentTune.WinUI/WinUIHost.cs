@@ -60,6 +60,7 @@ internal class WinUIHost : Host
     {
         services.AddSingleton<ILifetimeHandler, LifetimeHandler>();
         services.AddSingleton<INavigation, Navigation>();
+        services.AddSingleton<IThemeManager, ThemeManager>();
 
         services.AddSingleton<IPathResolver>(pathResolver);
     }
