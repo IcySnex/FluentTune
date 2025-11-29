@@ -1,4 +1,5 @@
-﻿using FluentTune.ViewModels;
+﻿using FluentTune.Helpers;
+using FluentTune.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
@@ -16,7 +17,7 @@ public abstract class Host
         services.AddLogging(builder =>
         {
             LoggerConfiguration configuration = new();
-            ConfigureLogging(configuration, "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:l}{NewLine:l}{Exception:l}");
+            ConfigureLogging(configuration, "[{Timestamp:HH:mm:ss} {Level:u3} {Class}] {Message:l}{NewLine:l}{Exception:l}");
 
             Log.Logger = configuration.CreateLogger();
 
@@ -40,6 +41,7 @@ public abstract class Host
         IServiceCollection services)
     {
         services.AddSingleton<MainViewModel>();
+        services.AddSingleton<SettingsViewModel>();
     }
 
 
@@ -48,6 +50,8 @@ public abstract class Host
         string preferredTemplate)
     {
         configuration.MinimumLevel.Information();
+
+        configuration.Enrich.With<SourceContextEnricher>();
 
         configuration.WriteTo.Debug(
             outputTemplate: preferredTemplate);
