@@ -20,11 +20,17 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Views\HomeView.xaml" />
+	  <None Remove="Views\MainView.xaml" />
+	</ItemGroup>
 
 	<!--Dependencies-->
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.7175" />
 		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.251106002" />
+		<PackageReference Include="Microsoft.Xaml.Behaviors.WinUI.Managed" Version="3.0.0" />
+		<PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
 	</ItemGroup>
 
 	<!--Resources-->
@@ -39,5 +45,21 @@
 	</PropertyGroup>
 	<ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
 		<ProjectCapability Include="Msix" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\FluentTune\FluentTune.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Page Update="Views\SettingsView.xaml">
+	    <SubType>Designer</SubType>
+	  </Page>
+	  <Page Update="Views\HomeView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
+	</ItemGroup>
+	<ItemGroup>
+	  <Page Update="Views\MainView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
 	</ItemGroup>
 </Project>

@@ -1,20 +1,22 @@
-﻿using Microsoft.UI.Xaml;
+﻿using FluentTune.Services.Abstract;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.UI.Xaml;
 
 namespace FluentTune.WinUI;
 
 public partial class App : Application
 {
-    private Window? _window;
-
     public App()
     {
         InitializeComponent();
     }
 
-    protected override void OnLaunched(
+
+    protected override async void OnLaunched(
         LaunchActivatedEventArgs args)
     {
-        _window = new MainWindow();
-        _window.Activate();
+        WinUIHost _ = new();
+
+        await Host.Provider.GetRequiredService<ILifetimeHandler>().StartAsync();
     }
 }
