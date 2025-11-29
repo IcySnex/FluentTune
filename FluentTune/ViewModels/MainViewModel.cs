@@ -10,5 +10,5 @@ public partial class MainViewModel(
 
 
     [ObservableProperty]
-    bool isPaneOpen;
+    bool isPaneOpen = true;
 }

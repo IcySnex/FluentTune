@@ -1,4 +1,5 @@
 ﻿using FluentTune.Services.Abstract;
+using FluentTune.WinUI.Views;
 using Microsoft.Extensions.Logging;
 using Microsoft.UI.Xaml;
 
@@ -19,10 +20,13 @@ public class LifetimeHandler(
     {
         logger.LogInformation("Starting application...");
 
+        ((MainView)WinUIHost.Window.Content).Loaded += (s, e) =>
+        {
+            navigation.Navigate("Home");
+        };
         WinUIHost.Window.Closed += async (s, e) => await StopAsync();
-        WinUIHost.Window.Activate();
 
-        navigation.Navigate("Home");
+        WinUIHost.Window.Activate();
     }
 
     public async Task StopAsync()

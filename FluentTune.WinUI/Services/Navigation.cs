@@ -2,6 +2,7 @@
 using FluentTune.WinUI.Helpers;
 using FluentTune.WinUI.Views;
 using Microsoft.Extensions.Logging;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Animation;
 
@@ -81,13 +82,16 @@ public class Navigation : INavigation
         if (backButton is null && titleBar.FindChild<Button>("PART_BackButton") is Button button)
         {
             backButton = button;
+            backButton.Width = 0;
 
+            // In Transition
             DoubleAnimation inAnim = new()
             {
                 EnableDependentAnimation = true,
-                To = 32,
-                Duration = new(TimeSpan.FromMilliseconds(100))
+                To = 40,
+                Duration = new(TimeSpan.FromMilliseconds(83))
             };
+
             backButtonInBoard = new()
             {
                 Children = { inAnim }
@@ -95,12 +99,15 @@ public class Navigation : INavigation
             Storyboard.SetTarget(inAnim, backButton);
             Storyboard.SetTargetProperty(inAnim, "Width");
 
+            // Out Transition
             DoubleAnimation outAnim = new()
             {
                 EnableDependentAnimation = true,
                 To = 0,
-                Duration = new(TimeSpan.FromMilliseconds(100))
+                Duration = new(TimeSpan.FromMilliseconds(83))
             };
+            outAnim.Completed += (s, e) => backButton.Visibility = Visibility.Collapsed;
+
             backButtonOutBoard = new()
             {
                 Children = { outAnim }
@@ -114,11 +121,13 @@ public class Navigation : INavigation
 
         titleBar.IsBackButtonEnabled = CanGoBack;
         if (CanGoBack)
+        {
+            backButton?.Visibility = Visibility.Visible;
             backButtonInBoard?.Begin();
+        }
         else
             backButtonOutBoard?.Begin();
     }
-
 
     public bool Navigate(
         string key)
