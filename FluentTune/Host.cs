@@ -1,4 +1,6 @@
 ﻿using FluentTune.Helpers;
+using FluentTune.Models;
+using FluentTune.Services.Abstract;
 using FluentTune.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -35,12 +37,24 @@ public abstract class Host
 
     protected void RegisterServices(
         IServiceCollection services)
-    { }
+    {
+        services.AddSingleton(provider =>
+        {
+            IPathResolver pathResolver = provider.GetRequiredService<IPathResolver>();
+
+            if (!File.Exists(pathResolver.ConfigFilePath))
+                return Config.Default;
+
+            string json = File.ReadAllText(pathResolver.ConfigFilePath);
+            return Json.Deserialize<Config>(json);
+        });
+    }
 
     protected void RegisterViewModels(
         IServiceCollection services)
     {
         services.AddSingleton<MainViewModel>();
+        services.AddSingleton<HomeViewModel>();
         services.AddSingleton<SettingsViewModel>();
     }
 

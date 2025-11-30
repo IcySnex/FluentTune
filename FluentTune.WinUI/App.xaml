@@ -3,8 +3,10 @@
     x:Class="FluentTune.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:hlprs="using:FluentTune.WinUI.Helpers"
     xmlns:local="using:FluentTune.WinUI"
-    xmlns:mdls="using:FluentTune.Models">
+    xmlns:mdls="using:FluentTune.Models"
+    RequestedTheme="Dark">
 
     <Application.Resources>
         <ResourceDictionary>
@@ -13,24 +15,7 @@
             </ResourceDictionary.MergedDictionaries>
 
 
-            <!--  Colors  -->
-            <mdls:Theme x:Key="Theme" />
-
-            <SolidColorBrush x:Key="Accent" Color="{Binding Accent, Source={ThemeResource Theme}}" />
-            <SolidColorBrush x:Key="AccentLight1" Color="{Binding AccentLight1, Source={ThemeResource Theme}}" />
-            <SolidColorBrush x:Key="AccentLight2" Color="{Binding AccentLight2, Source={ThemeResource Theme}}" />
-            <SolidColorBrush x:Key="AccentLight3" Color="{Binding AccentLight3, Source={ThemeResource Theme}}" />
-
-
-            <SolidColorBrush x:Key="AccentButtonBackground" Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
-            <SolidColorBrush
-                x:Key="AccentButtonBackgroundPointerOver"
-                Opacity="0.9"
-                Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
-            <SolidColorBrush
-                x:Key="AccentButtonBackgroundPressed"
-                Opacity="0.8"
-                Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
+            <hlprs:HexStringToColorConverter x:Key="HexStringToColorConverter" />
 
 
             <!--  Styles  -->
@@ -40,6 +25,138 @@
                 <Setter Property="Margin" Value="0,0,0,4" />
                 <Setter Property="FontWeight" Value="Medium" />
             </Style>
+
+
+            <!--#region Colors-->
+
+            <!--#region Theme-->
+            <mdls:Colors x:Key="Colors" />
+
+            <SolidColorBrush x:Key="AccentPrimary" Color="{Binding Accent.Primary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="AccentLight1" Color="{Binding Accent.Light1, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="AccentLight2" Color="{Binding Accent.Light2, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="AccentLight3" Color="{Binding Accent.Light3, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="AccentLight4" Color="{Binding Accent.Light4, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="AccentDark1" Color="{Binding Accent.Dark1, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="AccentDark2" Color="{Binding Accent.Dark2, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="AccentDark3" Color="{Binding Accent.Dark3, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="AccentDark4" Color="{Binding Accent.Dark4, Source={ThemeResource Colors}}" />
+
+            <SolidColorBrush x:Key="BackgroundWindow" Color="{Binding Background.Window, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="BackgroundControl" Color="{Binding Background.Control, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="BackgroundControlLow" Color="{Binding Background.ControlLow, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="BackgroundControlMedium" Color="{Binding Background.ControlMedium, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="BackgroundControlHigh" Color="{Binding Background.ControlHigh, Source={ThemeResource Colors}}" />
+
+            <SolidColorBrush x:Key="StrokeControl" Color="{Binding Stroke.Control, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="StrokeControlLow" Color="{Binding Stroke.ControlLow, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="StrokeControlMedium" Color="{Binding Stroke.ControlMedium, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="StrokeControlHigh" Color="{Binding Stroke.ControlHigh, Source={ThemeResource Colors}}" />
+
+            <SolidColorBrush x:Key="TextPrimary" Color="{Binding Text.Primary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="TextSecondary" Color="{Binding Text.Secondary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="TextTertiary" Color="{Binding Text.Tertiary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="TextQuaternary" Color="{Binding Text.Quaternary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="TextOnAccentPrimary" Color="{Binding Text.OnAccentPrimary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="TextOnAccentSecondary" Color="{Binding Text.OnAccentSecondary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="TextOnAccentTertiary" Color="{Binding Text.OnAccentTertiary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="TextOnAccentQuaternary" Color="{Binding Text.OnAccentQuaternary, Source={ThemeResource Colors}}" />
+            <!--#endregion-->
+
+
+            <!--#region Button-->
+            <SolidColorBrush x:Key="ButtonBackground" Color="{Binding Color, Source={ThemeResource BackgroundControl}}" />
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="{Binding Color, Source={ThemeResource BackgroundControlMedium}}" />
+            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+
+            <SolidColorBrush x:Key="ButtonBorderBrush" Color="{Binding Color, Source={ThemeResource StrokeControl}}" />
+            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+            <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+
+            <SolidColorBrush x:Key="ButtonForeground" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
+            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
+            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
+            <SolidColorBrush x:Key="ButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <!--#endregion-->
+
+            <!--#region AccentButton-->
+            <SolidColorBrush x:Key="AccentButtonBackground" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="AccentButtonBackgroundPointerOver" Color="{Binding Color, Source={ThemeResource AccentLight1}}" />
+            <SolidColorBrush x:Key="AccentButtonBackgroundPressed" Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
+            <SolidColorBrush x:Key="AccentButtonBackgroundDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+
+            <SolidColorBrush x:Key="AccentButtonBorderBrush" Color="{Binding Color, Source={ThemeResource StrokeControl}}" />
+            <SolidColorBrush x:Key="AccentButtonBorderBrushPointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+            <SolidColorBrush x:Key="AccentButtonBorderBrushPressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+            <SolidColorBrush x:Key="AccentButtonBorderBrushDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+
+            <SolidColorBrush x:Key="AccentButtonForeground" Color="{Binding Color, Source={ThemeResource TextOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="AccentButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource TextOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="AccentButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource TextOnAccentSecondary}}" />
+            <SolidColorBrush x:Key="AccentButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <!--#endregion-->
+
+            <!--#region ToggleButton-->
+            <SolidColorBrush x:Key="ToggleButtonBackground" Color="{Binding Color, Source={ThemeResource BackgroundControl}}" />
+            <SolidColorBrush x:Key="ToggleButtonBackgroundPointerOver" Color="{Binding Color, Source={ThemeResource BackgroundControlMedium}}" />
+            <SolidColorBrush x:Key="ToggleButtonBackgroundPressed" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="ToggleButtonBackgroundDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="ToggleButtonBackgroundChecked" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="ToggleButtonBackgroundCheckedPointerOver" Color="{Binding Color, Source={ThemeResource AccentLight1}}" />
+            <SolidColorBrush x:Key="ToggleButtonBackgroundCheckedPressed" Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
+            <SolidColorBrush x:Key="ToggleButtonBackgroundCheckedDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+            <SolidColorBrush x:Key="ToggleButtonBackgroundIndeterminate" Color="{Binding Color, Source={ThemeResource BackgroundControlMedium}}" />
+            <SolidColorBrush x:Key="ToggleButtonBackgroundIndeterminatePointerOver" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="ToggleButtonBackgroundIndeterminatePressed" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="ToggleButtonBackgroundIndeterminateDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+
+            <SolidColorBrush x:Key="ToggleButtonForeground" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundChecked" Color="{Binding Color, Source={ThemeResource TextOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundCheckedPointerOver" Color="{Binding Color, Source={ThemeResource TextOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundCheckedPressed" Color="{Binding Color, Source={ThemeResource TextOnAccentSecondary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundCheckedDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundIndeterminate" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundIndeterminatePointerOver" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundIndeterminatePressed" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundIndeterminateDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+
+            <SolidColorBrush x:Key="ToggleButtonBorderBrush" Color="{Binding Color, Source={ThemeResource StrokeControl}}" />
+            <SolidColorBrush x:Key="ToggleButtonBorderBrushPointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+            <SolidColorBrush x:Key="ToggleButtonBorderBrushPressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+            <SolidColorBrush x:Key="ToggleButtonBorderBrushDisabled" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+            <SolidColorBrush x:Key="ToggleButtonBorderBrushChecked" Color="{Binding Color, Source={ThemeResource StrokeControl}}" />
+            <SolidColorBrush x:Key="ToggleButtonBorderBrushCheckedPointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+            <SolidColorBrush x:Key="ToggleButtonBorderBrushCheckedPressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+            <SolidColorBrush x:Key="ToggleButtonBorderBrushCheckedDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+            <SolidColorBrush x:Key="ToggleButtonBorderBrushIndeterminate" Color="{Binding Color, Source={ThemeResource StrokeControl}}" />
+            <SolidColorBrush x:Key="ToggleButtonBorderBrushIndeterminatePointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+            <SolidColorBrush x:Key="ToggleButtonBorderBrushIndeterminatePressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+            <SolidColorBrush x:Key="ToggleButtonBorderBrushIndeterminateDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+            <!--#endregion-->
+
+            <!--#region HyperlinkButton-->
+            <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="Transparent" />
+            <SolidColorBrush x:Key="HyperlinkButtonBackgroundPointerOver" Color="{Binding Color, Source={ThemeResource BackgroundControl}}" />
+            <SolidColorBrush x:Key="HyperlinkButtonBackgroundPressed" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="HyperlinkButtonBackgroundDisabled" Color="Transparent" />
+
+            <SolidColorBrush x:Key="HyperlinkButtonBorderBrush" Color="Transparent" />
+            <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPointerOver" Color="{Binding Color, Source={ThemeResource BackgroundControl}}" />
+            <SolidColorBrush x:Key="HyperlinkButtonBorderBrushPressed" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="HyperlinkButtonBorderBrushDisabled" Color="Transparent" />
+
+            <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
+            <SolidColorBrush x:Key="HyperlinkButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource AccentLight1}}" />
+            <SolidColorBrush x:Key="HyperlinkButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <!--#endregion-->
+
+            <!--#endregion-->
 
         </ResourceDictionary>
     </Application.Resources>

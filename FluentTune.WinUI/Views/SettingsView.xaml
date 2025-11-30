@@ -17,10 +17,5 @@
         </Grid.RowDefinitions>
 
         <TextBlock Style="{StaticResource PageTitleTextBlockStyle}" Text="Settings" />
-
-        <Button
-            Grid.Row="2"
-            Command="{x:Bind vm.ChangeThemeCommand}"
-            Content="Apply Theme" />
     </Grid>
 </Page>

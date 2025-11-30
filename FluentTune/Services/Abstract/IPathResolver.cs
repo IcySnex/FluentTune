@@ -2,5 +2,7 @@
 
 public interface IPathResolver
 {
-    string LogFilepath { get; }
+    string LogFilePath { get; }
+
+    string ConfigFilePath { get; }
 }

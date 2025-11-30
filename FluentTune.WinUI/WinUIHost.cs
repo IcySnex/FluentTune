@@ -4,7 +4,6 @@ using FluentTune.WinUI.Views;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Media;
 using Serilog;
 
 namespace FluentTune.WinUI;
@@ -13,6 +12,9 @@ internal class WinUIHost : Host
 {
     public static Window Window { get; private set; } = default!;
 
+
+    readonly PathResolver pathResolver = new();
+
     public WinUIHost() : base()
     {
         MainView content = new();
@@ -20,7 +22,6 @@ internal class WinUIHost : Host
         Window = new()
         {
             Title = "FluentTune",
-            SystemBackdrop = new MicaBackdrop(),
             Content = content,
         };
 
@@ -39,9 +40,6 @@ internal class WinUIHost : Host
     }
 
 
-    readonly PathResolver pathResolver = new();
-
-
     protected override void ConfigureLogging(
         LoggerConfiguration configuration,
         string preferredTemplate)
@@ -49,7 +47,7 @@ internal class WinUIHost : Host
         base.ConfigureLogging(configuration, preferredTemplate);
 
         configuration.WriteTo.File(
-            path: pathResolver.LogFilepath,
+            path: pathResolver.LogFilePath,
             rollingInterval: RollingInterval.Day,
             retainedFileCountLimit: 10,
             outputTemplate: preferredTemplate);

@@ -11,16 +11,167 @@
 
     <ScrollViewer>
         <StackPanel Padding="24" Spacing="16">
-            <TextBlock Style="{StaticResource PageTitleTextBlockStyle}" Text="Home" />
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <TextBlock Style="{StaticResource PageTitleTextBlockStyle}" Text="Home" />
+
+                <Button Command="{x:Bind vm.ChangeThemeCommand}" Content="Change Theme" />
+                <Button Command="{x:Bind vm.ChangeBackdropCommand}" Content="Change Backdrop" />
+            </StackPanel>
+
+            <!--  Colors  -->
+            <StackPanel Spacing="8">
+                <TextBlock FontSize="20" Text="Colors" />
+                <StackPanel Spacing="8">
+                    <StackPanel
+                        Height="20"
+                        Orientation="Horizontal"
+                        Spacing="8">
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource AccentPrimary}"
+                            ToolTipService.ToolTip="AccentPrimary" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource AccentLight1}"
+                            ToolTipService.ToolTip="AccentLight1" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource AccentLight2}"
+                            ToolTipService.ToolTip="AccentLight2" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource AccentLight3}"
+                            ToolTipService.ToolTip="AccentLight3" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource AccentLight4}"
+                            ToolTipService.ToolTip="AccentLight4" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource AccentDark1}"
+                            ToolTipService.ToolTip="AccentDark1" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource AccentDark2}"
+                            ToolTipService.ToolTip="AccentDark2" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource AccentDark3}"
+                            ToolTipService.ToolTip="AccentDark3" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource AccentDark4}"
+                            ToolTipService.ToolTip="AccentDark4" />
+                    </StackPanel>
+
+                    <StackPanel
+                        Height="20"
+                        Orientation="Horizontal"
+                        Spacing="8">
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource BackgroundWindow}"
+                            ToolTipService.ToolTip="BackgroundWindow" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource BackgroundControl}"
+                            ToolTipService.ToolTip="BackgroundControl" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource BackgroundControlLow}"
+                            ToolTipService.ToolTip="BackgroundControlLow" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource BackgroundControlMedium}"
+                            ToolTipService.ToolTip="BackgroundControlMedium" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource BackgroundControlHigh}"
+                            ToolTipService.ToolTip="BackgroundControlHigh" />
+                    </StackPanel>
+
+                    <StackPanel
+                        Height="20"
+                        Orientation="Horizontal"
+                        Spacing="8">
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource StrokeControl}"
+                            ToolTipService.ToolTip="StrokeControl" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource StrokeControlLow}"
+                            ToolTipService.ToolTip="StrokeControlLow" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource StrokeControlMedium}"
+                            ToolTipService.ToolTip="StrokeControlMedium" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource StrokeControlHigh}"
+                            ToolTipService.ToolTip="StrokeControlHigh" />
+                    </StackPanel>
+
+                    <StackPanel
+                        Height="20"
+                        Orientation="Horizontal"
+                        Spacing="8">
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource TextPrimary}"
+                            ToolTipService.ToolTip="TextPrimary" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource TextSecondary}"
+                            ToolTipService.ToolTip="TextSecondary" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource TextTertiary}"
+                            ToolTipService.ToolTip="TextTertiary" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource TextQuaternary}"
+                            ToolTipService.ToolTip="TextQuaternary" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource TextOnAccentPrimary}"
+                            ToolTipService.ToolTip="TextOnAccentPrimary" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource TextOnAccentSecondary}"
+                            ToolTipService.ToolTip="TextOnAccentSecondary" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource TextOnAccentTertiary}"
+                            ToolTipService.ToolTip="TextOnAccentTertiary" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource TextOnAccentQuaternary}"
+                            ToolTipService.ToolTip="TextOnAccentQuaternary" />
+                    </StackPanel>
+                </StackPanel>
+
+            </StackPanel>
+
 
             <!--  Buttons  -->
             <StackPanel Spacing="8">
                 <TextBlock FontSize="20" Text="Buttons" />
                 <StackPanel Orientation="Horizontal" Spacing="8">
                     <Button Content="Standard" />
+                    <Button Content="Standard (X)" IsEnabled="False" />
                     <Button Content="Accent" Style="{StaticResource AccentButtonStyle}" />
+                    <Button
+                        Content="Accent (X)"
+                        IsEnabled="False"
+                        Style="{StaticResource AccentButtonStyle}" />
                     <ToggleButton Content="Toggle Button" />
+                    <ToggleButton Content="Toggle Button (X)" IsEnabled="False" />
                     <HyperlinkButton Content="Hyperlink Button" NavigateUri="https://example.com" />
+                    <HyperlinkButton
+                        Content="Hyperlink Button (X)"
+                        IsEnabled="False"
+                        NavigateUri="https://example.com" />
                 </StackPanel>
             </StackPanel>
 

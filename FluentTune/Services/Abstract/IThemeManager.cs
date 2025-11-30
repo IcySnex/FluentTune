@@ -2,5 +2,5 @@
 
 public interface IThemeManager
 {
-    void ApplyTheme();
+    void Initialize();
 }
