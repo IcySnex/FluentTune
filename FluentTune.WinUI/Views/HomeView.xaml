@@ -179,11 +179,19 @@
             <!--  Text Inputs  -->
             <StackPanel Spacing="8">
                 <TextBlock FontSize="20" Text="Text Inputs" />
-                <TextBox
-                    Width="300"
-                    HorizontalAlignment="Left"
-                    Header="Standard TextBox"
-                    PlaceholderText="Enter text..." />
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <TextBox
+                        Width="300"
+                        HorizontalAlignment="Left"
+                        Header="Standard TextBox"
+                        PlaceholderText="Enter text..." />
+                    <TextBox
+                        Width="300"
+                        HorizontalAlignment="Left"
+                        Header="Standard TextBox (X)"
+                        IsEnabled="False"
+                        PlaceholderText="Enter text..." />
+                </StackPanel>
                 <PasswordBox
                     Width="300"
                     HorizontalAlignment="Left"
@@ -197,6 +205,7 @@
                     Width="150"
                     HorizontalAlignment="Left"
                     Header="NumberBox"
+                    SpinButtonPlacementMode="Compact"
                     Value="42" />
                 <RichEditBox
                     Width="300"

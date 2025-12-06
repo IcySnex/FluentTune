@@ -27,11 +27,13 @@ public class Colors(
         }
 
         target.Background.Window = source.Background.Window;
+        target.Background.Popup = source.Background.Popup;
         target.Background.Control = source.Background.Control;
         target.Background.ControlLow = source.Background.ControlLow;
         target.Background.ControlMedium = source.Background.ControlMedium;
         target.Background.ControlHigh = source.Background.ControlHigh;
 
+        target.Stroke.Popup = source.Stroke.Popup;
         target.Stroke.Control = source.Stroke.Control;
         target.Stroke.ControlLow = source.Stroke.ControlLow;
         target.Stroke.ControlMedium = source.Stroke.ControlMedium;
@@ -62,11 +64,13 @@ public class Colors(
             dark4: "#FF872D35"),
         background: new(
             window: "#00000000",
+            popup: "#ff2c2c2c",
             control: "#0FFFFFFF",
             controlLow: "#08FFFFFF",
             controlMedium: "#15FFFFFF",
             controlHigh: "#24FFFFFF"),
         stroke: new(
+            popup: "#22000000",
             control: "#12FFFFFF",
             controlLow: "#17FFFFFF",
             controlMedium: "#23FFFFFF",
@@ -141,6 +145,7 @@ public partial class ColorsAccent(
 
 public partial class ColorsBackground(
     string window,
+    string popup,
     string control,
     string controlLow,
     string controlMedium,
@@ -148,6 +153,10 @@ public partial class ColorsBackground(
 {
     [ObservableProperty]
     string window = window;
+    
+
+    [ObservableProperty]
+    string popup = popup;
 
 
     [ObservableProperty]
@@ -164,11 +173,16 @@ public partial class ColorsBackground(
 }
 
 public partial class ColorsStroke(
+    string popup,
     string control,
     string controlLow,
     string controlMedium,
     string controlHigh) : ObservableObject
 {
+    [ObservableProperty]
+    string popup = popup;
+
+
     [ObservableProperty]
     string control = control;
 

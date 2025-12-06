@@ -42,7 +42,7 @@ public class LifetimeHandler(
         string directoryPath = Path.GetDirectoryName(pathResolver.ConfigFilePath) ?? string.Empty;
         Directory.CreateDirectory(directoryPath);
 
-        string json = Json.Serialize(this, true);
+        string json = Json.Serialize(config, true);
         await File.WriteAllTextAsync(pathResolver.ConfigFilePath, json);
 
         Environment.Exit(0);

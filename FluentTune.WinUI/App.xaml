@@ -43,11 +43,13 @@
             <SolidColorBrush x:Key="AccentDark4" Color="{Binding Accent.Dark4, Source={ThemeResource Colors}}" />
 
             <SolidColorBrush x:Key="BackgroundWindow" Color="{Binding Background.Window, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="BackgroundPopup" Color="{Binding Background.Popup, Source={ThemeResource Colors}}" />
             <SolidColorBrush x:Key="BackgroundControl" Color="{Binding Background.Control, Source={ThemeResource Colors}}" />
             <SolidColorBrush x:Key="BackgroundControlLow" Color="{Binding Background.ControlLow, Source={ThemeResource Colors}}" />
             <SolidColorBrush x:Key="BackgroundControlMedium" Color="{Binding Background.ControlMedium, Source={ThemeResource Colors}}" />
             <SolidColorBrush x:Key="BackgroundControlHigh" Color="{Binding Background.ControlHigh, Source={ThemeResource Colors}}" />
 
+            <SolidColorBrush x:Key="StrokePopup" Color="{Binding Stroke.Popup, Source={ThemeResource Colors}}" />
             <SolidColorBrush x:Key="StrokeControl" Color="{Binding Stroke.Control, Source={ThemeResource Colors}}" />
             <SolidColorBrush x:Key="StrokeControlLow" Color="{Binding Stroke.ControlLow, Source={ThemeResource Colors}}" />
             <SolidColorBrush x:Key="StrokeControlMedium" Color="{Binding Stroke.ControlMedium, Source={ThemeResource Colors}}" />
@@ -154,6 +156,70 @@
             <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
             <SolidColorBrush x:Key="HyperlinkButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource AccentLight1}}" />
             <SolidColorBrush x:Key="HyperlinkButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <!--#endregion-->
+
+            <!--#region TextControl-->
+            <Thickness x:Key="TextControlBorderThemeThickness">0,0,0,1</Thickness>
+            <Thickness x:Key="TextControlBorderThemeThicknessFocused">0,0,0,2</Thickness>
+
+            <SolidColorBrush x:Key="TextControlBackground" Color="{Binding Color, Source={ThemeResource BackgroundControl}}" />
+            <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="{Binding Color, Source={ThemeResource BackgroundControlMedium}}" />
+            <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+
+            <SolidColorBrush x:Key="TextControlBorderBrush" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
+            <SolidColorBrush x:Key="TextControlBorderBrushPointerOver" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
+            <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="TextControlBorderBrushDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+
+            <SolidColorBrush x:Key="TextControlForeground" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
+            <SolidColorBrush x:Key="TextControlForegroundPointerOver" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
+            <SolidColorBrush x:Key="TextControlForegroundFocused" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
+            <SolidColorBrush x:Key="TextControlForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+
+            <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="{Binding Color, Source={ThemeResource TextTertiary}}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="{Binding Color, Source={ThemeResource TextTertiary}}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+
+            <SolidColorBrush x:Key="TextControlHeaderForeground" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
+            <SolidColorBrush x:Key="TextControlHeaderForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+
+            <SolidColorBrush x:Key="TextControlSelectionHighlightColor" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+
+            <SolidColorBrush x:Key="TextControlButtonBackground" Color="{Binding Color, Source={ThemeResource BackgroundControl}}" />
+            <SolidColorBrush x:Key="TextControlButtonBackgroundPointerOver" Color="{Binding Color, Source={ThemeResource BackgroundControlMedium}}" />
+            <SolidColorBrush x:Key="TextControlButtonBackgroundPressed" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+
+            <SolidColorBrush x:Key="TextControlButtonBorderBrush" Color="{Binding Color, Source={ThemeResource StrokeControl}}" />
+            <SolidColorBrush x:Key="TextControlButtonBorderBrushPointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+            <SolidColorBrush x:Key="TextControlButtonBorderBrushPressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+
+            <SolidColorBrush x:Key="TextControlButtonForeground" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
+            <SolidColorBrush x:Key="TextControlButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
+            <SolidColorBrush x:Key="TextControlButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
+
+            <!--#region NumberBox-->
+            <SolidColorBrush x:Key="NumberBoxPopupIndicatorForeground" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
+
+            <AcrylicBrush
+                x:Key="NumberBoxPopupBackground"
+                FallbackColor="{Binding Color, Source={ThemeResource BackgroundPopup}}"
+                TintColor="{Binding Color, Source={ThemeResource BackgroundPopup}}"
+                TintOpacity="0.15" />
+
+            <SolidColorBrush x:Key="NumberBoxPopupBorderBrush" Color="{Binding Color, Source={ThemeResource StrokePopup}}" />
+            <!--#endregion-->
+
+            <!--#endregion-->
+
+
+            <!--#region Tooltip-->
+            <SolidColorBrush x:Key="ToolTipBackgroundBrush" Color="{Binding Color, Source={ThemeResource BackgroundPopup}}" />
+
+            <SolidColorBrush x:Key="ToolTipBorderBrush" Color="{Binding Color, Source={ThemeResource StrokePopup}}" />
+
+            <SolidColorBrush x:Key="ToolTipForegroundBrush" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
             <!--#endregion-->
 
             <!--#endregion-->

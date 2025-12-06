@@ -40,12 +40,14 @@ public partial class HomeViewModel(
                 dark3: GetRandomColor(),
                 dark4: GetRandomColor()),
             background: new(
-                window: GetRandomColor(),
+                window: GetRandomColor(0),
+                popup: GetRandomColor(),
                 control: GetRandomColor(),
                 controlLow: GetRandomColor(),
                 controlMedium: GetRandomColor(),
                 controlHigh: GetRandomColor()),
             stroke: new(
+                popup: GetRandomColor(),
                 control: GetRandomColor(),
                 controlLow: GetRandomColor(),
                 controlMedium: GetRandomColor(),
