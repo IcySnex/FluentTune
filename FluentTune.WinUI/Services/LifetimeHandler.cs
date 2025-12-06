@@ -13,13 +13,6 @@ public class LifetimeHandler(
     INavigation navigation,
     IThemeManager themeManager) : ILifetimeHandler
 {
-    readonly ILogger<LifetimeHandler> logger = logger;
-    readonly Config config = config;
-    readonly IPathResolver pathResolver = pathResolver;
-    readonly INavigation navigation = navigation;
-    readonly IThemeManager themeManager = themeManager;
-
-
     public async Task StartAsync()
     {
         logger.LogInformation("Starting application...");

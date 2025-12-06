@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using FluentTune.Models;
-using FluentTune.Services.Abstract;
 using FluentTune.Types;
 using Microsoft.Extensions.Logging;
 
@@ -11,10 +10,6 @@ public partial class HomeViewModel(
     ILogger<HomeViewModel> logger,
     Config config) : ObservableObject
 {
-    readonly ILogger<HomeViewModel> logger = logger;
-    readonly Config config = config;
-
-
     [RelayCommand]
     void ChangeTheme()
     {
@@ -27,6 +22,9 @@ public partial class HomeViewModel(
 
             return $"#{transparency:X2}{r:X2}{g:X2}{b:X2}";
         }
+
+
+        logger.LogInformation("Randomizing theme...");
 
         Colors randomColors = new(
             accent: new(

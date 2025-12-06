@@ -3,7 +3,6 @@
     x:Class="FluentTune.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:hlprs="using:FluentTune.WinUI.Helpers"
     xmlns:local="using:FluentTune.WinUI"
     xmlns:mdls="using:FluentTune.Models"
     RequestedTheme="Dark">
@@ -13,9 +12,6 @@
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
             </ResourceDictionary.MergedDictionaries>
-
-
-            <hlprs:HexStringToColorConverter x:Key="HexStringToColorConverter" />
 
 
             <!--  Styles  -->

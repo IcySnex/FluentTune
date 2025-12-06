@@ -16,10 +16,6 @@ public class ThemeManager(
     ILogger<ThemeManager> logger,
     Config config) : IThemeManager
 {
-    readonly ILogger<ThemeManager> logger = logger;
-    readonly Config config = config;
-
-
     void OnThemePropertyChanged(
         object? sender,
         PropertyChangedEventArgs e)

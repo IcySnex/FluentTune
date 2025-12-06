@@ -1,11 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Microsoft.Extensions.Logging;
 
 namespace FluentTune.ViewModels;
 
-public partial class SettingsViewModel(
-    ILogger<SettingsViewModel> logger) : ObservableObject
+public partial class SettingsViewModel : ObservableObject
 {
-    readonly ILogger<SettingsViewModel> logger = logger;
 
 }

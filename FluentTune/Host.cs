@@ -35,7 +35,7 @@ public abstract class Host
     }
 
 
-    protected void RegisterServices(
+    protected static void RegisterServices(
         IServiceCollection services)
     {
         services.AddSingleton(provider =>
@@ -50,7 +50,7 @@ public abstract class Host
         });
     }
 
-    protected void RegisterViewModels(
+    protected static void RegisterViewModels(
         IServiceCollection services)
     {
         services.AddSingleton<MainViewModel>();
