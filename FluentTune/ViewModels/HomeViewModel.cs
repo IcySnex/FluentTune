@@ -43,14 +43,18 @@ public partial class HomeViewModel(
                 control: GetRandomColor(),
                 controlLow: GetRandomColor(),
                 controlMedium: GetRandomColor(),
-                controlHigh: GetRandomColor()),
+                controlHigh: GetRandomColor(),
+                statusNeutral: GetRandomColor(),
+                statusSuccess: GetRandomColor(),
+                statusCaution: GetRandomColor(),
+                statusCritical: GetRandomColor()),
             stroke: new(
                 popup: GetRandomColor(),
                 control: GetRandomColor(),
                 controlLow: GetRandomColor(),
                 controlMedium: GetRandomColor(),
                 controlHigh: GetRandomColor()),
-            text: new(
+            foreground: new(
                 primary: GetRandomColor(),
                 secondary: GetRandomColor(),
                 tertiary: GetRandomColor(),
@@ -58,7 +62,11 @@ public partial class HomeViewModel(
                 onAccentPrimary: GetRandomColor(),
                 onAccentSecondary: GetRandomColor(),
                 onAccentTertiary: GetRandomColor(),
-                onAccentQuaternary: GetRandomColor()));
+                onAccentQuaternary: GetRandomColor(),
+                statusNeutral: GetRandomColor(),
+                statusSuccess: GetRandomColor(),
+                statusCaution: GetRandomColor(),
+                statusCritical: GetRandomColor()));
 
         Colors.Override(config.Theme.Colors, randomColors);
     }

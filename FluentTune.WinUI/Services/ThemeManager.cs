@@ -43,60 +43,25 @@ public class ThemeManager(
         }
     }
 
-    void OnThemeColorsTextPropertyChanged(
+    void OnThemeColorsForegroundPropertyChanged(
         object? sender,
         PropertyChangedEventArgs e)
     {
         switch (e.PropertyName)
         {
-            case nameof(Theme.Colors.Text.Primary):
-                WinUIHost.Window.AppWindow.TitleBar.ButtonForegroundColor = config.Theme.Colors.Text.Primary.ToColor();
+            case nameof(Theme.Colors.Foreground.Primary):
+                WinUIHost.Window.AppWindow.TitleBar.ButtonForegroundColor = config.Theme.Colors.Foreground.Primary.ToColor();
                 break;
-            case nameof(Theme.Colors.Text.Secondary):
-                WinUIHost.Window.AppWindow.TitleBar.ButtonInactiveForegroundColor = config.Theme.Colors.Text.Secondary.ToColor();
+            case nameof(Theme.Colors.Foreground.Secondary):
+                WinUIHost.Window.AppWindow.TitleBar.ButtonInactiveForegroundColor = config.Theme.Colors.Foreground.Secondary.ToColor();
                 break;
-            case nameof(Theme.Colors.Text.Tertiary):
-                WinUIHost.Window.AppWindow.TitleBar.ButtonInactiveForegroundColor = config.Theme.Colors.Text.Tertiary.ToColor();
+            case nameof(Theme.Colors.Foreground.Tertiary):
+                WinUIHost.Window.AppWindow.TitleBar.ButtonInactiveForegroundColor = config.Theme.Colors.Foreground.Tertiary.ToColor();
                 break;
-            case nameof(Theme.Colors.Text.Quaternary):
-                WinUIHost.Window.AppWindow.TitleBar.ButtonInactiveForegroundColor = config.Theme.Colors.Text.Quaternary.ToColor();
+            case nameof(Theme.Colors.Foreground.Quaternary):
+                WinUIHost.Window.AppWindow.TitleBar.ButtonInactiveForegroundColor = config.Theme.Colors.Foreground.Quaternary.ToColor();
                 break;
         }
-    }
-
-
-    public void Initialize()
-    {
-        logger.LogInformation("Initializing theme...");
-
-        // Sync UI colors & config 
-        Colors appColors = (Colors)Application.Current.Resources["Colors"];
-
-        Colors.Override(appColors, config.Theme.Colors);
-        config.Theme.Colors.Accent = appColors.Accent;
-        config.Theme.Colors.Background = appColors.Background;
-        config.Theme.Colors.Stroke = appColors.Stroke;
-        config.Theme.Colors.Text = appColors.Text;
-
-        // Titlebar colors
-        WinUIHost.Window.AppWindow.TitleBar.ButtonBackgroundColor = Color.FromArgb(0, 0, 0, 0);
-        WinUIHost.Window.AppWindow.TitleBar.ButtonInactiveBackgroundColor = Color.FromArgb(0, 0, 0, 0);
-        WinUIHost.Window.AppWindow.TitleBar.ButtonHoverBackgroundColor = config.Theme.Colors.Background.Control.ToColor();
-        WinUIHost.Window.AppWindow.TitleBar.ButtonPressedBackgroundColor = config.Theme.Colors.Background.ControlLow.ToColor();
-
-        WinUIHost.Window.AppWindow.TitleBar.ButtonForegroundColor = config.Theme.Colors.Text.Primary.ToColor();
-        WinUIHost.Window.AppWindow.TitleBar.ButtonInactiveForegroundColor = config.Theme.Colors.Text.Quaternary.ToColor();
-        WinUIHost.Window.AppWindow.TitleBar.ButtonHoverForegroundColor = config.Theme.Colors.Text.Secondary.ToColor();
-        WinUIHost.Window.AppWindow.TitleBar.ButtonPressedForegroundColor = config.Theme.Colors.Text.Tertiary.ToColor();
-
-        // Backdrop
-        ApplyBackdrop(config.Theme.Backdrop);
-
-        // Handlers
-        config.Theme.PropertyChanged += OnThemePropertyChanged;
-        config.Theme.Colors.Background.PropertyChanged += OnThemeColorsBackgroundPropertyChanged;
-        config.Theme.Colors.Text.PropertyChanged += OnThemeColorsTextPropertyChanged;
-
     }
 
 
@@ -124,5 +89,40 @@ public class ThemeManager(
                     WinUIHost.Window.SystemBackdrop = new DesktopAcrylicBackdrop();
                 break;
         }
+    }
+
+
+    public void Initialize()
+    {
+        logger.LogInformation("Initializing theme...");
+
+        // Sync UI colors & config 
+        Colors appColors = (Colors)Application.Current.Resources["Colors"];
+
+        Colors.Override(appColors, config.Theme.Colors);
+        config.Theme.Colors.Accent = appColors.Accent;
+        config.Theme.Colors.Background = appColors.Background;
+        config.Theme.Colors.Stroke = appColors.Stroke;
+        config.Theme.Colors.Foreground = appColors.Foreground;
+
+        // Titlebar colors
+        WinUIHost.Window.AppWindow.TitleBar.ButtonBackgroundColor = Color.FromArgb(0, 0, 0, 0);
+        WinUIHost.Window.AppWindow.TitleBar.ButtonInactiveBackgroundColor = Color.FromArgb(0, 0, 0, 0);
+        WinUIHost.Window.AppWindow.TitleBar.ButtonHoverBackgroundColor = config.Theme.Colors.Background.Control.ToColor();
+        WinUIHost.Window.AppWindow.TitleBar.ButtonPressedBackgroundColor = config.Theme.Colors.Background.ControlLow.ToColor();
+
+        WinUIHost.Window.AppWindow.TitleBar.ButtonForegroundColor = config.Theme.Colors.Foreground.Primary.ToColor();
+        WinUIHost.Window.AppWindow.TitleBar.ButtonInactiveForegroundColor = config.Theme.Colors.Foreground.Quaternary.ToColor();
+        WinUIHost.Window.AppWindow.TitleBar.ButtonHoverForegroundColor = config.Theme.Colors.Foreground.Secondary.ToColor();
+        WinUIHost.Window.AppWindow.TitleBar.ButtonPressedForegroundColor = config.Theme.Colors.Foreground.Tertiary.ToColor();
+
+        // Backdrop
+        ApplyBackdrop(config.Theme.Backdrop);
+
+        // Handlers
+        config.Theme.PropertyChanged += OnThemePropertyChanged;
+        config.Theme.Colors.Background.PropertyChanged += OnThemeColorsBackgroundPropertyChanged;
+        config.Theme.Colors.Foreground.PropertyChanged += OnThemeColorsForegroundPropertyChanged;
+
     }
 }

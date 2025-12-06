@@ -74,6 +74,10 @@
                             ToolTipService.ToolTip="BackgroundWindow" />
                         <Rectangle
                             Width="50"
+                            Fill="{ThemeResource BackgroundPopup}"
+                            ToolTipService.ToolTip="BackgroundPopup" />
+                        <Rectangle
+                            Width="50"
                             Fill="{ThemeResource BackgroundControl}"
                             ToolTipService.ToolTip="BackgroundControl" />
                         <Rectangle
@@ -88,12 +92,32 @@
                             Width="50"
                             Fill="{ThemeResource BackgroundControlHigh}"
                             ToolTipService.ToolTip="BackgroundControlHigh" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource BackgroundStatusNeutral}"
+                            ToolTipService.ToolTip="BackgroundStatusNeutral" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource BackgroundStatusSuccess}"
+                            ToolTipService.ToolTip="BackgroundStatusSuccess" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource BackgroundStatusCaution}"
+                            ToolTipService.ToolTip="BackgroundStatusCaution" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource BackgroundStatusCritical}"
+                            ToolTipService.ToolTip="BackgroundStatusCritical" />
                     </StackPanel>
 
                     <StackPanel
                         Height="20"
                         Orientation="Horizontal"
                         Spacing="8">
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource StrokePopup}"
+                            ToolTipService.ToolTip="StrokePopup" />
                         <Rectangle
                             Width="50"
                             Fill="{ThemeResource StrokeControl}"
@@ -118,36 +142,52 @@
                         Spacing="8">
                         <Rectangle
                             Width="50"
-                            Fill="{ThemeResource TextPrimary}"
-                            ToolTipService.ToolTip="TextPrimary" />
+                            Fill="{ThemeResource ForegroundPrimary}"
+                            ToolTipService.ToolTip="ForegroundPrimary" />
                         <Rectangle
                             Width="50"
-                            Fill="{ThemeResource TextSecondary}"
-                            ToolTipService.ToolTip="TextSecondary" />
+                            Fill="{ThemeResource ForegroundSecondary}"
+                            ToolTipService.ToolTip="ForegroundSecondary" />
                         <Rectangle
                             Width="50"
-                            Fill="{ThemeResource TextTertiary}"
-                            ToolTipService.ToolTip="TextTertiary" />
+                            Fill="{ThemeResource ForegroundTertiary}"
+                            ToolTipService.ToolTip="ForegroundTertiary" />
                         <Rectangle
                             Width="50"
-                            Fill="{ThemeResource TextQuaternary}"
-                            ToolTipService.ToolTip="TextQuaternary" />
+                            Fill="{ThemeResource ForegroundQuaternary}"
+                            ToolTipService.ToolTip="ForegroundQuaternary" />
                         <Rectangle
                             Width="50"
-                            Fill="{ThemeResource TextOnAccentPrimary}"
-                            ToolTipService.ToolTip="TextOnAccentPrimary" />
+                            Fill="{ThemeResource ForegroundOnAccentPrimary}"
+                            ToolTipService.ToolTip="ForegroundOnAccentPrimary" />
                         <Rectangle
                             Width="50"
-                            Fill="{ThemeResource TextOnAccentSecondary}"
-                            ToolTipService.ToolTip="TextOnAccentSecondary" />
+                            Fill="{ThemeResource ForegroundOnAccentSecondary}"
+                            ToolTipService.ToolTip="ForegroundOnAccentSecondary" />
                         <Rectangle
                             Width="50"
-                            Fill="{ThemeResource TextOnAccentTertiary}"
-                            ToolTipService.ToolTip="TextOnAccentTertiary" />
+                            Fill="{ThemeResource ForegroundOnAccentTertiary}"
+                            ToolTipService.ToolTip="ForegroundOnAccentTertiary" />
                         <Rectangle
                             Width="50"
-                            Fill="{ThemeResource TextOnAccentQuaternary}"
-                            ToolTipService.ToolTip="TextOnAccentQuaternary" />
+                            Fill="{ThemeResource ForegroundOnAccentQuaternary}"
+                            ToolTipService.ToolTip="ForegroundOnAccentQuaternary" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource ForegroundStatusNeutral}"
+                            ToolTipService.ToolTip="ForegroundStatusNeutral" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource ForegroundStatusSuccess}"
+                            ToolTipService.ToolTip="ForegroundStatusSuccess" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource ForegroundStatusCaution}"
+                            ToolTipService.ToolTip="ForegroundStatusCaution" />
+                        <Rectangle
+                            Width="50"
+                            Fill="{ThemeResource ForegroundStatusCritical}"
+                            ToolTipService.ToolTip="ForegroundStatusCritical" />
                     </StackPanel>
                 </StackPanel>
 
@@ -218,18 +258,48 @@
             <!--  Sliders & Progress  -->
             <StackPanel Spacing="8">
                 <TextBlock FontSize="20" Text="Sliders &amp; Progress" />
-                <Slider
-                    Width="300"
-                    HorizontalAlignment="Left"
-                    Maximum="100"
-                    Minimum="0"
-                    Value="60" />
-                <ProgressBar
-                    Width="300"
-                    HorizontalAlignment="Left"
-                    Maximum="100"
-                    Minimum="0"
-                    Value="40" />
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <Slider
+                        Width="300"
+                        HorizontalAlignment="Left"
+                        Maximum="100"
+                        Minimum="0"
+                        TickFrequency="10"
+                        TickPlacement="Outside"
+                        Value="60" />
+                    <Slider
+                        Width="300"
+                        HorizontalAlignment="Left"
+                        IsEnabled="False"
+                        Maximum="100"
+                        Minimum="0"
+                        TickFrequency="10"
+                        TickPlacement="Outside"
+                        Value="60" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <ProgressBar
+                        Width="200"
+                        HorizontalAlignment="Left"
+                        IsIndeterminate="True"
+                        Maximum="100"
+                        Minimum="0"
+                        Value="40" />
+                    <ProgressBar
+                        Width="200"
+                        HorizontalAlignment="Left"
+                        Maximum="100"
+                        Minimum="0"
+                        ShowPaused="True"
+                        Value="40" />
+                    <ProgressBar
+                        Width="200"
+                        HorizontalAlignment="Left"
+                        Maximum="100"
+                        Minimum="0"
+                        ShowError="True"
+                        Value="40" />
+                </StackPanel>
                 <ProgressRing
                     Width="40"
                     Height="40"
@@ -242,13 +312,25 @@
             <StackPanel Spacing="8">
                 <TextBlock FontSize="20" Text="Checkboxes &amp; RadioButtons" />
                 <StackPanel Orientation="Horizontal" Spacing="12">
-                    <CheckBox Content="CheckBox 1" />
-                    <CheckBox Content="CheckBox 2" IsChecked="True" />
+                    <CheckBox Content="CheckBox" />
+                    <CheckBox Content="CheckBox (X)" IsEnabled="False" />
+                    <CheckBox
+                        Content="CheckBox (X)"
+                        IsChecked="True"
+                        IsEnabled="False" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Spacing="12">
-                    <RadioButton Content="Option A" />
-                    <RadioButton Content="Option B" />
-                    <RadioButton Content="Option C" IsChecked="True" />
+                    <RadioButton Content="Option" />
+                    <RadioButton Content="Option (X)" IsEnabled="False" />
+                    <RadioButton
+                        Content="Option (X)"
+                        IsChecked="True"
+                        IsEnabled="False" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                    <ToggleSwitch />
+                    <ToggleSwitch IsEnabled="False" />
+                    <ToggleSwitch IsEnabled="False" IsOn="True" />
                 </StackPanel>
             </StackPanel>
 
@@ -273,14 +355,6 @@
                         <MenuFlyoutItem Text="Paste" />
                     </MenuBarItem>
                 </MenuBar>
-            </StackPanel>
-
-
-            <!--  Toggle Switches  -->
-            <StackPanel Spacing="8">
-                <TextBlock FontSize="20" Text="Toggle Controls" />
-                <ToggleSwitch Header="ToggleSwitch A" />
-                <ToggleSwitch Header="ToggleSwitch B" IsOn="True" />
             </StackPanel>
 
 
@@ -313,8 +387,6 @@
                 <TimePicker />
                 <ColorPicker HorizontalAlignment="Left" />
             </StackPanel>
-
-
         </StackPanel>
     </ScrollViewer>
 </Page>

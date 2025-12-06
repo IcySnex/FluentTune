@@ -44,6 +44,10 @@
             <SolidColorBrush x:Key="BackgroundControlLow" Color="{Binding Background.ControlLow, Source={ThemeResource Colors}}" />
             <SolidColorBrush x:Key="BackgroundControlMedium" Color="{Binding Background.ControlMedium, Source={ThemeResource Colors}}" />
             <SolidColorBrush x:Key="BackgroundControlHigh" Color="{Binding Background.ControlHigh, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="BackgroundStatusNeutral" Color="{Binding Background.StatusNeutral, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="BackgroundStatusSuccess" Color="{Binding Background.StatusSuccess, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="BackgroundStatusCaution" Color="{Binding Background.StatusCaution, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="BackgroundStatusCritical" Color="{Binding Background.StatusCritical, Source={ThemeResource Colors}}" />
 
             <SolidColorBrush x:Key="StrokePopup" Color="{Binding Stroke.Popup, Source={ThemeResource Colors}}" />
             <SolidColorBrush x:Key="StrokeControl" Color="{Binding Stroke.Control, Source={ThemeResource Colors}}" />
@@ -51,14 +55,18 @@
             <SolidColorBrush x:Key="StrokeControlMedium" Color="{Binding Stroke.ControlMedium, Source={ThemeResource Colors}}" />
             <SolidColorBrush x:Key="StrokeControlHigh" Color="{Binding Stroke.ControlHigh, Source={ThemeResource Colors}}" />
 
-            <SolidColorBrush x:Key="TextPrimary" Color="{Binding Text.Primary, Source={ThemeResource Colors}}" />
-            <SolidColorBrush x:Key="TextSecondary" Color="{Binding Text.Secondary, Source={ThemeResource Colors}}" />
-            <SolidColorBrush x:Key="TextTertiary" Color="{Binding Text.Tertiary, Source={ThemeResource Colors}}" />
-            <SolidColorBrush x:Key="TextQuaternary" Color="{Binding Text.Quaternary, Source={ThemeResource Colors}}" />
-            <SolidColorBrush x:Key="TextOnAccentPrimary" Color="{Binding Text.OnAccentPrimary, Source={ThemeResource Colors}}" />
-            <SolidColorBrush x:Key="TextOnAccentSecondary" Color="{Binding Text.OnAccentSecondary, Source={ThemeResource Colors}}" />
-            <SolidColorBrush x:Key="TextOnAccentTertiary" Color="{Binding Text.OnAccentTertiary, Source={ThemeResource Colors}}" />
-            <SolidColorBrush x:Key="TextOnAccentQuaternary" Color="{Binding Text.OnAccentQuaternary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="ForegroundPrimary" Color="{Binding Foreground.Primary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="ForegroundSecondary" Color="{Binding Foreground.Secondary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="ForegroundTertiary" Color="{Binding Foreground.Tertiary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="ForegroundQuaternary" Color="{Binding Foreground.Quaternary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="ForegroundOnAccentPrimary" Color="{Binding Foreground.OnAccentPrimary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="ForegroundOnAccentSecondary" Color="{Binding Foreground.OnAccentSecondary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="ForegroundOnAccentTertiary" Color="{Binding Foreground.OnAccentTertiary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="ForegroundOnAccentQuaternary" Color="{Binding Foreground.OnAccentQuaternary, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="ForegroundStatusNeutral" Color="{Binding Foreground.StatusNeutral, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="ForegroundStatusSuccess" Color="{Binding Foreground.StatusSuccess, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="ForegroundStatusCaution" Color="{Binding Foreground.StatusCaution, Source={ThemeResource Colors}}" />
+            <SolidColorBrush x:Key="ForegroundStatusCritical" Color="{Binding Foreground.StatusCritical, Source={ThemeResource Colors}}" />
             <!--#endregion-->
 
 
@@ -73,10 +81,10 @@
             <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
             <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
 
-            <SolidColorBrush x:Key="ButtonForeground" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
-            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
-            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
-            <SolidColorBrush x:Key="ButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <SolidColorBrush x:Key="ButtonForeground" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="ButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
             <!--#endregion-->
 
             <!--#region AccentButton-->
@@ -90,10 +98,10 @@
             <SolidColorBrush x:Key="AccentButtonBorderBrushPressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
             <SolidColorBrush x:Key="AccentButtonBorderBrushDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
 
-            <SolidColorBrush x:Key="AccentButtonForeground" Color="{Binding Color, Source={ThemeResource TextOnAccentPrimary}}" />
-            <SolidColorBrush x:Key="AccentButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource TextOnAccentPrimary}}" />
-            <SolidColorBrush x:Key="AccentButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource TextOnAccentSecondary}}" />
-            <SolidColorBrush x:Key="AccentButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <SolidColorBrush x:Key="AccentButtonForeground" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="AccentButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="AccentButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentSecondary}}" />
+            <SolidColorBrush x:Key="AccentButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
             <!--#endregion-->
 
             <!--#region ToggleButton-->
@@ -110,18 +118,18 @@
             <SolidColorBrush x:Key="ToggleButtonBackgroundIndeterminatePressed" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
             <SolidColorBrush x:Key="ToggleButtonBackgroundIndeterminateDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
 
-            <SolidColorBrush x:Key="ToggleButtonForeground" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
-            <SolidColorBrush x:Key="ToggleButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
-            <SolidColorBrush x:Key="ToggleButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
-            <SolidColorBrush x:Key="ToggleButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
-            <SolidColorBrush x:Key="ToggleButtonForegroundChecked" Color="{Binding Color, Source={ThemeResource TextOnAccentPrimary}}" />
-            <SolidColorBrush x:Key="ToggleButtonForegroundCheckedPointerOver" Color="{Binding Color, Source={ThemeResource TextOnAccentPrimary}}" />
-            <SolidColorBrush x:Key="ToggleButtonForegroundCheckedPressed" Color="{Binding Color, Source={ThemeResource TextOnAccentSecondary}}" />
-            <SolidColorBrush x:Key="ToggleButtonForegroundCheckedDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
-            <SolidColorBrush x:Key="ToggleButtonForegroundIndeterminate" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
-            <SolidColorBrush x:Key="ToggleButtonForegroundIndeterminatePointerOver" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
-            <SolidColorBrush x:Key="ToggleButtonForegroundIndeterminatePressed" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
-            <SolidColorBrush x:Key="ToggleButtonForegroundIndeterminateDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForeground" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundChecked" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundCheckedPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundCheckedPressed" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentSecondary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundCheckedDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundIndeterminate" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundIndeterminatePointerOver" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundIndeterminatePressed" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="ToggleButtonForegroundIndeterminateDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
 
             <SolidColorBrush x:Key="ToggleButtonBorderBrush" Color="{Binding Color, Source={ThemeResource StrokeControl}}" />
             <SolidColorBrush x:Key="ToggleButtonBorderBrushPointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
@@ -151,7 +159,7 @@
             <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
             <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
             <SolidColorBrush x:Key="HyperlinkButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource AccentLight1}}" />
-            <SolidColorBrush x:Key="HyperlinkButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <SolidColorBrush x:Key="HyperlinkButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
             <!--#endregion-->
 
             <!--#region TextControl-->
@@ -163,23 +171,23 @@
             <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
             <SolidColorBrush x:Key="TextControlBackgroundDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
 
-            <SolidColorBrush x:Key="TextControlBorderBrush" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
-            <SolidColorBrush x:Key="TextControlBorderBrushPointerOver" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
+            <SolidColorBrush x:Key="TextControlBorderBrush" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="TextControlBorderBrushPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
             <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
-            <SolidColorBrush x:Key="TextControlBorderBrushDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <SolidColorBrush x:Key="TextControlBorderBrushDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
 
-            <SolidColorBrush x:Key="TextControlForeground" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
-            <SolidColorBrush x:Key="TextControlForegroundPointerOver" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
-            <SolidColorBrush x:Key="TextControlForegroundFocused" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
-            <SolidColorBrush x:Key="TextControlForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <SolidColorBrush x:Key="TextControlForeground" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="TextControlForegroundPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="TextControlForegroundFocused" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="TextControlForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
 
-            <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="{Binding Color, Source={ThemeResource TextTertiary}}" />
-            <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="{Binding Color, Source={ThemeResource TextTertiary}}" />
-            <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
-            <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForeground" Color="{Binding Color, Source={ThemeResource ForegroundTertiary}}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForegroundPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundTertiary}}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForegroundFocused" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="TextControlPlaceholderForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
 
-            <SolidColorBrush x:Key="TextControlHeaderForeground" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
-            <SolidColorBrush x:Key="TextControlHeaderForegroundDisabled" Color="{Binding Color, Source={ThemeResource TextQuaternary}}" />
+            <SolidColorBrush x:Key="TextControlHeaderForeground" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="TextControlHeaderForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
 
             <SolidColorBrush x:Key="TextControlSelectionHighlightColor" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
 
@@ -191,12 +199,12 @@
             <SolidColorBrush x:Key="TextControlButtonBorderBrushPointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
             <SolidColorBrush x:Key="TextControlButtonBorderBrushPressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
 
-            <SolidColorBrush x:Key="TextControlButtonForeground" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
-            <SolidColorBrush x:Key="TextControlButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
-            <SolidColorBrush x:Key="TextControlButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
+            <SolidColorBrush x:Key="TextControlButtonForeground" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="TextControlButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="TextControlButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
 
             <!--#region NumberBox-->
-            <SolidColorBrush x:Key="NumberBoxPopupIndicatorForeground" Color="{Binding Color, Source={ThemeResource TextSecondary}}" />
+            <SolidColorBrush x:Key="NumberBoxPopupIndicatorForeground" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
 
             <AcrylicBrush
                 x:Key="NumberBoxPopupBackground"
@@ -209,13 +217,1021 @@
 
             <!--#endregion-->
 
+            <!--#region Slider-->
+            <SolidColorBrush x:Key="SliderContainerBackground" Color="Transparent" />
+            <SolidColorBrush x:Key="SliderContainerBackgroundPointerOver" Color="Transparent" />
+            <SolidColorBrush x:Key="SliderContainerBackgroundPressed" Color="Transparent" />
+            <SolidColorBrush x:Key="SliderContainerBackgroundDisabled" Color="Transparent" />
+
+            <SolidColorBrush x:Key="SliderThumbBackground" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="SliderThumbBackgroundPointerOver" Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
+            <SolidColorBrush x:Key="SliderThumbBackgroundPressed" Color="{Binding Color, Source={ThemeResource AccentLight1}}" />
+            <SolidColorBrush x:Key="SliderThumbBackgroundDisabled" Color="{Binding Color, Source={ThemeResource StrokeControlHigh}}" />
+
+            <SolidColorBrush x:Key="SliderTrackFill" Color="{Binding Color, Source={ThemeResource StrokeControlHigh}}" />
+            <SolidColorBrush x:Key="SliderTrackFillPointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlHigh}}" />
+            <SolidColorBrush x:Key="SliderTrackFillPressed" Color="{Binding Color, Source={ThemeResource StrokeControlHigh}}" />
+            <SolidColorBrush x:Key="SliderTrackFillDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+
+            <SolidColorBrush x:Key="SliderTrackValueFill" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="SliderTrackValueFillPointerOver" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="SliderTrackValueFillPressed" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="SliderTrackValueFillDisabled" Color="{Binding Color, Source={ThemeResource StrokeControlHigh}}" />
+
+            <SolidColorBrush x:Key="SliderHeaderForeground" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="SliderHeaderForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+
+            <SolidColorBrush x:Key="SliderTickBarFill" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+            <SolidColorBrush x:Key="SliderTickBarFillDisabled" Color="{Binding Color, Source={ThemeResource StrokeControlHigh}}" />
+
+            <SolidColorBrush x:Key="SliderInlineTickBarFill" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+            <!--#endregion-->
+
+            <!--#region ProgressBar-->
+            <SolidColorBrush x:Key="ProgressBarBackground" Color="{Binding Color, Source={ThemeResource StrokeControlHigh}}" />
+
+            <SolidColorBrush x:Key="ProgressBarBorderBrush" Color="{Binding Color, Source={ThemeResource StrokeControl}}" />
+
+            <SolidColorBrush x:Key="ProgressBarForeground" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+
+            <!--  allat because WinUI cant just use brushes for paused/error state  -->
+            <Style TargetType="ProgressBar">
+                <Setter Property="Foreground" Value="{ThemeResource ProgressBarForeground}" />
+                <Setter Property="Background" Value="{ThemeResource ProgressBarBackground}" />
+                <Setter Property="BorderThickness" Value="{ThemeResource ProgressBarBorderThemeThickness}" />
+                <Setter Property="BorderBrush" Value="{ThemeResource ProgressBarBorderBrush}" />
+                <Setter Property="MinHeight" Value="{StaticResource ProgressBarMinHeight}" />
+                <Setter Property="Maximum" Value="100" />
+                <Setter Property="IsTabStop" Value="False" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="CornerRadius" Value="{StaticResource ProgressBarCornerRadius}" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ProgressBar">
+                            <Grid x:Name="LayoutRoot">
+                                <Border
+                                    x:Name="ProgressBarRoot"
+                                    Padding="{TemplateBinding Padding}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{TemplateBinding CornerRadius}">
+                                    <Border Clip="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.ClipRect}">
+                                        <Grid Height="{TemplateBinding MinHeight}">
+                                            <Rectangle
+                                                x:Name="ProgressBarTrack"
+                                                Width="{TemplateBinding Width}"
+                                                Height="{ThemeResource ProgressBarTrackHeight}"
+                                                VerticalAlignment="Center"
+                                                Fill="{TemplateBinding Background}"
+                                                RadiusX="{Binding Source={StaticResource ProgressBarTrackCornerRadius}, Converter={StaticResource TopLeftCornerRadiusDoubleValueConverter}}"
+                                                RadiusY="{Binding Source={StaticResource ProgressBarTrackCornerRadius}, Converter={StaticResource BottomRightCornerRadiusDoubleValueConverter}}">
+                                                <Rectangle.RenderTransform>
+                                                    <CompositeTransform />
+                                                </Rectangle.RenderTransform>
+                                            </Rectangle>
+
+                                            <Rectangle
+                                                x:Name="DeterminateProgressBarIndicator"
+                                                HorizontalAlignment="Left"
+                                                Fill="{TemplateBinding Foreground}"
+                                                RadiusX="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource TopLeftCornerRadiusDoubleValueConverter}}"
+                                                RadiusY="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BottomRightCornerRadiusDoubleValueConverter}}" />
+
+                                            <Rectangle
+                                                x:Name="IndeterminateProgressBarIndicator"
+                                                HorizontalAlignment="Left"
+                                                Fill="{TemplateBinding Foreground}"
+                                                Opacity="0">
+                                                <Rectangle.RenderTransform>
+                                                    <CompositeTransform />
+                                                </Rectangle.RenderTransform>
+                                            </Rectangle>
+                                            <Rectangle
+                                                x:Name="IndeterminateProgressBarIndicator2"
+                                                HorizontalAlignment="Left"
+                                                Fill="{TemplateBinding Foreground}"
+                                                Opacity="0">
+                                                <Rectangle.RenderTransform>
+                                                    <CompositeTransform />
+                                                </Rectangle.RenderTransform>
+                                            </Rectangle>
+                                        </Grid>
+                                    </Border>
+                                </Border>
+
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualStateGroup.Transitions>
+                                            <VisualTransition From="Updating" To="Determinate">
+                                                <Storyboard>
+                                                    <RepositionThemeAnimation FromHorizontalOffset="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.IndicatorLengthDelta}" TargetName="DeterminateProgressBarIndicator" />
+                                                </Storyboard>
+                                            </VisualTransition>
+                                            <VisualTransition From="UpdatingPaused" To="Paused">
+                                                <Storyboard>
+                                                    <RepositionThemeAnimation FromHorizontalOffset="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.IndicatorLengthDelta}" TargetName="DeterminateProgressBarIndicator" />
+                                                </Storyboard>
+                                            </VisualTransition>
+                                            <VisualTransition From="UpdatingError" To="Error">
+                                                <Storyboard>
+                                                    <RepositionThemeAnimation FromHorizontalOffset="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.IndicatorLengthDelta}" TargetName="DeterminateProgressBarIndicator" />
+                                                </Storyboard>
+                                            </VisualTransition>
+
+                                            <VisualTransition From="Paused" To="Determinate">
+                                                <Storyboard>
+                                                    <ColorAnimation
+                                                        Storyboard.TargetName="DeterminateProgressBarIndicator"
+                                                        Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                                        To="{TemplateBinding Foreground}"
+                                                        Duration="0:0:0.167" />
+                                                </Storyboard>
+                                            </VisualTransition>
+                                            <VisualTransition From="Error" To="Determinate">
+                                                <Storyboard>
+                                                    <ColorAnimation
+                                                        Storyboard.TargetName="DeterminateProgressBarIndicator"
+                                                        Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                                        To="{TemplateBinding Foreground}"
+                                                        Duration="0:0:0.167" />
+                                                </Storyboard>
+                                            </VisualTransition>
+                                            <VisualTransition From="Indeterminate" To="Determinate">
+                                                <Storyboard>
+                                                    <FadeInThemeAnimation TargetName="IndeterminateProgressBarIndicator" />
+                                                    <FadeInThemeAnimation TargetName="IndeterminateProgressBarIndicator2" />
+                                                    <FadeInThemeAnimation TargetName="ProgressBarTrack" />
+                                                </Storyboard>
+                                            </VisualTransition>
+                                        </VisualStateGroup.Transitions>
+
+                                        <VisualState x:Name="Normal" />
+                                        <VisualState x:Name="Determinate" />
+
+                                        <VisualState x:Name="Updating" />
+                                        <VisualState x:Name="UpdatingPaused">
+                                            <VisualState.Setters>
+                                                <Setter Target="DeterminateProgressBarIndicator.Fill" Value="{ThemeResource ForegroundStatusCaution}" />
+                                                <Setter Target="IndeterminateProgressBarIndicator2.Fill" Value="{ThemeResource ForegroundStatusCaution}" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                        <VisualState x:Name="UpdatingError">
+                                            <VisualState.Setters>
+                                                <Setter Target="DeterminateProgressBarIndicator.Fill" Value="{ThemeResource ForegroundStatusCritical}" />
+                                                <Setter Target="IndeterminateProgressBarIndicator2.Fill" Value="{ThemeResource ForegroundStatusCritical}" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+
+                                        <VisualState x:Name="Error">
+                                            <Storyboard>
+                                                <RepositionThemeAnimation FromHorizontalOffset="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.IndicatorLengthDelta}" TargetName="DeterminateProgressBarIndicator" />
+                                            </Storyboard>
+                                            <VisualState.Setters>
+                                                <Setter Target="DeterminateProgressBarIndicator.Fill" Value="{ThemeResource ForegroundStatusCritical}" />
+                                                <Setter Target="IndeterminateProgressBarIndicator2.Fill" Value="{ThemeResource ForegroundStatusCritical}" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+
+                                        <VisualState x:Name="Paused">
+                                            <Storyboard>
+                                                <RepositionThemeAnimation FromHorizontalOffset="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.IndicatorLengthDelta}" TargetName="DeterminateProgressBarIndicator" />
+                                            </Storyboard>
+                                            <VisualState.Setters>
+                                                <Setter Target="DeterminateProgressBarIndicator.Fill" Value="{ThemeResource ForegroundStatusCaution}" />
+                                                <Setter Target="IndeterminateProgressBarIndicator2.Fill" Value="{ThemeResource ForegroundStatusCaution}" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+
+                                        <VisualState x:Name="Indeterminate">
+                                            <VisualState.Setters>
+                                                <Setter Target="IndeterminateProgressBarIndicator.Opacity" Value="1" />
+                                                <Setter Target="IndeterminateProgressBarIndicator2.Opacity" Value="1" />
+                                                <Setter Target="ProgressBarTrack.Opacity" Value="0" />
+                                            </VisualState.Setters>
+                                            <Storyboard RepeatBehavior="Forever">
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="IndeterminateProgressBarIndicator" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.ContainerAnimationStartPosition}" />
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="0.4,0,0.6,1"
+                                                        KeyTime="0:0:1.5"
+                                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.ContainerAnimationEndPosition}" />
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:2" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.ContainerAnimationEndPosition}" />
+                                                </DoubleAnimationUsingKeyFrames>
+
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="IndeterminateProgressBarIndicator2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                                                    <DiscreteDoubleKeyFrame KeyTime="0" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.Container2AnimationStartPosition}" />
+                                                    <DiscreteDoubleKeyFrame KeyTime="0:0:0.75" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.Container2AnimationStartPosition}" />
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="0.4,0,0.6,1"
+                                                        KeyTime="0:0:2"
+                                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.Container2AnimationEndPosition}" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+
+                                        <VisualState x:Name="IndeterminateError">
+                                            <VisualState.Setters>
+                                                <Setter Target="IndeterminateProgressBarIndicator.Opacity" Value="0" />
+                                                <Setter Target="DeterminateProgressBarIndicator.Opacity" Value="0" />
+                                                <Setter Target="IndeterminateProgressBarIndicator2.Opacity" Value="1" />
+                                                <Setter Target="ProgressBarTrack.Opacity" Value="0" />
+                                                <Setter Target="IndeterminateProgressBarIndicator2.Fill" Value="{ThemeResource ForegroundStatusCritical}" />
+                                            </VisualState.Setters>
+                                            <Storyboard>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="IndeterminateProgressBarIndicator2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="1,1,0,1"
+                                                        KeyTime="0:0:0.167"
+                                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.Container2AnimationEndPosition}" />
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="1,1,0,1"
+                                                        KeyTime="0:0:0.167"
+                                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.Container2AnimationStartPosition}" />
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="0,0,0,1"
+                                                        KeyTime="0:0:0.75"
+                                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.ContainerAnimationMidPosition}" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ProgressBarTrack" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="0,0,0,1"
+                                                        KeyTime="0:0:0"
+                                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.Container2AnimationStartPosition}" />
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="0,0,0,1"
+                                                        KeyTime="0:0:0.75"
+                                                        Value="0" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+
+                                        <VisualState x:Name="IndeterminatePaused">
+                                            <VisualState.Setters>
+                                                <Setter Target="IndeterminateProgressBarIndicator.Opacity" Value="0" />
+                                                <Setter Target="DeterminateProgressBarIndicator.Opacity" Value="0" />
+                                                <Setter Target="IndeterminateProgressBarIndicator2.Opacity" Value="1" />
+                                                <Setter Target="ProgressBarTrack.Opacity" Value="0" />
+                                                <Setter Target="IndeterminateProgressBarIndicator2.Fill" Value="{ThemeResource ForegroundStatusCaution}" />
+                                            </VisualState.Setters>
+                                            <Storyboard>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="IndeterminateProgressBarIndicator2" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="1,1,0,1"
+                                                        KeyTime="0:0:0.167"
+                                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.Container2AnimationEndPosition}" />
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="1,1,0,1"
+                                                        KeyTime="0:0:0.167"
+                                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.Container2AnimationStartPosition}" />
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="0,0,0,1"
+                                                        KeyTime="0:0:0.75"
+                                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.ContainerAnimationMidPosition}" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ProgressBarTrack" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="0,0,0,1"
+                                                        KeyTime="0:0:0"
+                                                        Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.Container2AnimationStartPosition}" />
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="0,0,0,1"
+                                                        KeyTime="0:0:0.75"
+                                                        Value="0" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!--#endregion-->
+
+            <!--#region ProgressRing-->
+            <SolidColorBrush x:Key="ProgressRingBackgroundThemeBrush" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+
+            <SolidColorBrush x:Key="ProgressRingForegroundThemeBrush" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <!--#endregion-->
+
+            <!--#region CheckBox-->
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillUnchecked" Color="{Binding Color, Source={ThemeResource BackgroundControlMedium}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillUncheckedPointerOver" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillUncheckedPressed" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillUncheckedDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillChecked" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillCheckedPointerOver" Color="{Binding Color, Source={ThemeResource AccentLight1}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillCheckedPressed" Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundFillCheckedDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeUnchecked" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeUncheckedPointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlHigh}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeUncheckedPressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeUncheckedDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeChecked" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeCheckedPointerOver" Color="{Binding Color, Source={ThemeResource AccentLight1}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeCheckedPressed" Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckBackgroundStrokeCheckedDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+
+            <SolidColorBrush x:Key="CheckBoxForegroundUnchecked" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="CheckBoxForegroundUncheckedPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="CheckBoxForegroundUncheckedPressed" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="CheckBoxForegroundUncheckedDisabled" Color="{Binding Color, Source={ThemeResource ForegroundTertiary}}" />
+
+            <SolidColorBrush x:Key="CheckBoxForegroundChecked" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="CheckBoxForegroundCheckedPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="CheckBoxForegroundCheckedPressed" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="CheckBoxForegroundCheckedDisabled" Color="{Binding Color, Source={ThemeResource ForegroundTertiary}}" />
+
+            <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundChecked" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundCheckedPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundCheckedPressed" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentSecondary}}" />
+            <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundCheckedDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+            <!--#endregion-->
+
+            <!--#region RadioButton-->
+            <SolidColorBrush x:Key="RadioButtonBackground" Color="Transparent" />
+            <SolidColorBrush x:Key="RadioButtonBackgroundPointerOver" Color="Transparent" />
+            <SolidColorBrush x:Key="RadioButtonBackgroundPressed" Color="Transparent" />
+            <SolidColorBrush x:Key="RadioButtonBackgroundDisabled" Color="Transparent" />
+
+            <SolidColorBrush x:Key="RadioButtonBorderBrush" Color="Transparent" />
+            <SolidColorBrush x:Key="RadioButtonBorderBrushPointerOver" Color="Transparent" />
+            <SolidColorBrush x:Key="RadioButtonBorderBrushPressed" Color="Transparent" />
+            <SolidColorBrush x:Key="RadioButtonBorderBrushDisabled" Color="Transparent" />
+
+            <SolidColorBrush x:Key="RadioButtonForeground" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="RadioButtonForegroundPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="RadioButtonForegroundPressed" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="RadioButtonForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundTertiary}}" />
+
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseFill" Color="{Binding Color, Source={ThemeResource BackgroundControlMedium}}" />
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseFillPointerOver" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseFillPressed" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseFillDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseCheckedFill" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseCheckedFillPointerOver" Color="{Binding Color, Source={ThemeResource AccentLight1}}" />
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseCheckedFillPressed" Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseCheckedFillDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseStroke" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseStrokePointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlHigh}}" />
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseStrokePressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseStrokeDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseCheckedStroke" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseCheckedStrokePointerOver" Color="{Binding Color, Source={ThemeResource AccentLight1}}" />
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseCheckedStrokePressed" Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
+            <SolidColorBrush x:Key="RadioButtonOuterEllipseCheckedStrokeDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+
+            <SolidColorBrush x:Key="RadioButtonCheckGlyphFill" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="RadioButtonCheckGlyphFillPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="RadioButtonCheckGlyphFillPressed" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentSecondary}}" />
+            <SolidColorBrush x:Key="RadioButtonCheckGlyphFillDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+
+            <SolidColorBrush x:Key="RadioButtonCheckGlyphStroke" Color="{Binding Color, Source={ThemeResource StrokeControl}}" />
+            <SolidColorBrush x:Key="RadioButtonCheckGlyphStrokePointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+            <SolidColorBrush x:Key="RadioButtonCheckGlyphStrokePressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+            <SolidColorBrush x:Key="RadioButtonCheckGlyphStrokeDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <!--#endregion-->
+
+            <!--#region ToggleSwitch-->
+            <SolidColorBrush x:Key="ToggleSwitchContainerBackground" Color="Transparent" />
+            <SolidColorBrush x:Key="ToggleSwitchContainerBackgroundPointerOver" Color="Transparent" />
+            <SolidColorBrush x:Key="ToggleSwitchContainerBackgroundPressed" Color="Transparent" />
+            <SolidColorBrush x:Key="ToggleSwitchContainerBackgroundDisabled" Color="Transparent" />
+
+            <SolidColorBrush x:Key="ToggleSwitchContentForeground" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ToggleSwitchContentForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundTertiary}}" />
+
+            <SolidColorBrush x:Key="ToggleSwitchFillOff" Color="{Binding Color, Source={ThemeResource BackgroundControlMedium}}" />
+            <SolidColorBrush x:Key="ToggleSwitchFillOffPointerOver" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+            <SolidColorBrush x:Key="ToggleSwitchFillOffPressed" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="ToggleSwitchFillOffDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOff" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOffPointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlHigh}}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOffPressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOffDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOff" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOffPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOffPressed" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOffDisabled" Color="{Binding Color, Source={ThemeResource ForegroundTertiary}}" />
+
+            <SolidColorBrush x:Key="ToggleSwitchFillOn" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="ToggleSwitchFillOnPointerOver" Color="{Binding Color, Source={ThemeResource AccentLight1}}" />
+            <SolidColorBrush x:Key="ToggleSwitchFillOnPressed" Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
+            <SolidColorBrush x:Key="ToggleSwitchFillOnDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOn" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOnPointerOver" Color="{Binding Color, Source={ThemeResource AccentLight1}}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOnPressed" Color="{Binding Color, Source={ThemeResource AccentLight2}}" />
+            <SolidColorBrush x:Key="ToggleSwitchStrokeOnDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlHigh}}" />
+
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOn" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOnPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentPrimary}}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOnPressed" Color="{Binding Color, Source={ThemeResource ForegroundOnAccentSecondary}}" />
+            <SolidColorBrush x:Key="ToggleSwitchKnobFillOnDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+
+            <!--  bruh WinUi i created a ticket for this 3 years ago (#7225). FIX YOUR STYLING  -->
+            <Style TargetType="ToggleSwitch">
+                <Setter Property="Foreground" Value="{ThemeResource ToggleSwitchContentForeground}" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalContentAlignment" Value="Left" />
+                <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}" />
+                <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}" />
+                <Setter Property="ManipulationMode" Value="System,TranslateX" />
+                <Setter Property="UseSystemFocusVisuals" Value="{StaticResource UseSystemFocusVisuals}" />
+                <Setter Property="MinWidth" Value="{StaticResource ToggleSwitchThemeMinWidth}" />
+                <Setter Property="FocusVisualMargin" Value="-7,-3,-7,-3" />
+                <Setter Property="CornerRadius" Value="{StaticResource ControlCornerRadius}" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ToggleSwitch">
+                            <Grid
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <ContentPresenter
+                                    x:Name="HeaderContentPresenter"
+                                    Grid.Row="0"
+                                    Margin="{ThemeResource ToggleSwitchTopHeaderMargin}"
+                                    VerticalAlignment="Top"
+                                    x:DeferLoadStrategy="Lazy"
+                                    AutomationProperties.AccessibilityView="Raw"
+                                    Content="{TemplateBinding Header}"
+                                    ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                    Foreground="{ThemeResource ToggleSwitchHeaderForeground}"
+                                    IsHitTestVisible="False"
+                                    TextWrapping="Wrap"
+                                    Visibility="Collapsed" />
+                                <Grid
+                                    Grid.Row="1"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="{ThemeResource ToggleSwitchPreContentMargin}" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="{ThemeResource ToggleSwitchPostContentMargin}" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="12" MaxWidth="12" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid
+                                        x:Name="SwitchAreaGrid"
+                                        Grid.RowSpan="3"
+                                        Grid.ColumnSpan="3"
+                                        Margin="0,5"
+                                        Background="{ThemeResource ToggleSwitchContainerBackground}"
+                                        Control.IsTemplateFocusTarget="True"
+                                        CornerRadius="{TemplateBinding CornerRadius}" />
+                                    <ContentPresenter
+                                        x:Name="OffContentPresenter"
+                                        Grid.RowSpan="3"
+                                        Grid.Column="2"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        AutomationProperties.AccessibilityView="Raw"
+                                        Content="{TemplateBinding OffContent}"
+                                        ContentTemplate="{TemplateBinding OffContentTemplate}"
+                                        Foreground="{TemplateBinding Foreground}"
+                                        IsHitTestVisible="False"
+                                        Opacity="0" />
+                                    <ContentPresenter
+                                        x:Name="OnContentPresenter"
+                                        Grid.RowSpan="3"
+                                        Grid.Column="2"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        AutomationProperties.AccessibilityView="Raw"
+                                        Content="{TemplateBinding OnContent}"
+                                        ContentTemplate="{TemplateBinding OnContentTemplate}"
+                                        Foreground="{TemplateBinding Foreground}"
+                                        IsHitTestVisible="False"
+                                        Opacity="0" />
+                                    <Rectangle
+                                        x:Name="OuterBorder"
+                                        Grid.Row="1"
+                                        Width="40"
+                                        Height="20"
+                                        Fill="{ThemeResource ToggleSwitchFillOff}"
+                                        RadiusX="10"
+                                        RadiusY="10"
+                                        Stroke="{ThemeResource ToggleSwitchStrokeOff}"
+                                        StrokeThickness="{ThemeResource ToggleSwitchOuterBorderStrokeThickness}" />
+                                    <Rectangle
+                                        x:Name="SwitchKnobBounds"
+                                        Grid.Row="1"
+                                        Width="40"
+                                        Height="20"
+                                        Fill="{ThemeResource ToggleSwitchFillOn}"
+                                        Opacity="0"
+                                        RadiusX="10"
+                                        RadiusY="10"
+                                        Stroke="{ThemeResource ToggleSwitchStrokeOn}"
+                                        StrokeThickness="{ThemeResource ToggleSwitchOnStrokeThickness}" />
+                                    <Grid
+                                        x:Name="SwitchKnob"
+                                        Grid.Row="1"
+                                        Width="20"
+                                        Height="20"
+                                        HorizontalAlignment="Left">
+                                        <Border
+                                            x:Name="SwitchKnobOn"
+                                            Width="12"
+                                            Height="12"
+                                            Margin="0,0,1,0"
+                                            HorizontalAlignment="Center"
+                                            Background="{ThemeResource ToggleSwitchKnobFillOn}"
+                                            BackgroundSizing="OuterBorderEdge"
+                                            BorderBrush="{ThemeResource ToggleSwitchKnobStrokeOn}"
+                                            CornerRadius="7"
+                                            Opacity="0"
+                                            RenderTransformOrigin="0.5, 0.5">
+                                            <Border.RenderTransform>
+                                                <CompositeTransform />
+                                            </Border.RenderTransform>
+                                        </Border>
+                                        <Rectangle
+                                            x:Name="SwitchKnobOff"
+                                            Width="12"
+                                            Height="12"
+                                            Margin="-1,0,0,0"
+                                            HorizontalAlignment="Center"
+                                            Fill="{ThemeResource ToggleSwitchKnobFillOff}"
+                                            RadiusX="7"
+                                            RadiusY="7"
+                                            RenderTransformOrigin="0.5, 0.5">
+                                            <Rectangle.RenderTransform>
+                                                <CompositeTransform />
+                                            </Rectangle.RenderTransform>
+                                        </Rectangle>
+                                        <Grid.RenderTransform>
+                                            <TranslateTransform x:Name="KnobTranslateTransform" />
+                                        </Grid.RenderTransform>
+                                    </Grid>
+                                    <Thumb
+                                        x:Name="SwitchThumb"
+                                        Grid.RowSpan="3"
+                                        Grid.ColumnSpan="3"
+                                        AutomationProperties.AccessibilityView="Raw">
+                                        <Thumb.Template>
+                                            <ControlTemplate TargetType="Thumb">
+                                                <Rectangle Fill="Transparent" />
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                </Grid>
+
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Stroke">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchStrokeOff}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Fill">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchFillOff}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOff" Storyboard.TargetProperty="Fill">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchKnobFillOff}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOn" Storyboard.TargetProperty="Background">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchKnobFillOn}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobBounds" Storyboard.TargetProperty="Fill">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchFillOn}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobBounds" Storyboard.TargetProperty="Stroke">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchStrokeOn}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchAreaGrid" Storyboard.TargetProperty="Background">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchContainerBackground}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOn"
+                                                    Storyboard.TargetProperty="Width">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlFasterAnimationDuration}"
+                                                        Value="12" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOn"
+                                                    Storyboard.TargetProperty="Height">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlFasterAnimationDuration}"
+                                                        Value="12" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOff"
+                                                    Storyboard.TargetProperty="Width">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlFasterAnimationDuration}"
+                                                        Value="12" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOff"
+                                                    Storyboard.TargetProperty="Height">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlFasterAnimationDuration}"
+                                                        Value="12" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+
+                                        <VisualState x:Name="PointerOver">
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)">
+                                                    <LinearColorKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="{Binding Color, Source={ThemeResource ToggleSwitchStrokeOffPointerOver}}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                                                    <LinearColorKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="{Binding Color, Source={ThemeResource ToggleSwitchFillOffPointerOver}}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOff" Storyboard.TargetProperty="Fill">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchKnobFillOffPointerOver}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOn" Storyboard.TargetProperty="Background">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchKnobFillOnPointerOver}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobBounds" Storyboard.TargetProperty="Fill">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchFillOnPointerOver}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobBounds" Storyboard.TargetProperty="Stroke">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchStrokeOnPointerOver}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="SwitchAreaGrid" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                                    <LinearColorKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="{ThemeResource ToggleSwitchContainerBackgroundPointerOver}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOn"
+                                                    Storyboard.TargetProperty="Width">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlFasterAnimationDuration}"
+                                                        Value="14" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOn"
+                                                    Storyboard.TargetProperty="Height">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlFasterAnimationDuration}"
+                                                        Value="14" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOff"
+                                                    Storyboard.TargetProperty="Width">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlFasterAnimationDuration}"
+                                                        Value="14" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOff"
+                                                    Storyboard.TargetProperty="Height">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlFasterAnimationDuration}"
+                                                        Value="14" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+
+                                        <VisualState x:Name="Pressed">
+                                            <VisualState.Setters>
+                                                <Setter Target="SwitchKnobOn.HorizontalAlignment" Value="Right" />
+                                                <Setter Target="SwitchKnobOn.Margin" Value="0,0,3,0" />
+                                                <Setter Target="SwitchKnobOff.HorizontalAlignment" Value="Left" />
+                                                <Setter Target="SwitchKnobOff.Margin" Value="3,0,0,0" />
+                                            </VisualState.Setters>
+                                            <Storyboard>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)">
+                                                    <LinearColorKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="{Binding Color, Source={ThemeResource ToggleSwitchStrokeOffPressed}}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                                                    <LinearColorKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="{Binding Color, Source={ThemeResource ToggleSwitchFillOffPressed}}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobBounds" Storyboard.TargetProperty="Fill">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchFillOnPressed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobBounds" Storyboard.TargetProperty="Stroke">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchStrokeOnPressed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOff" Storyboard.TargetProperty="Fill">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchKnobFillOffPressed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOn" Storyboard.TargetProperty="Background">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchKnobFillOnPressed}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="SwitchAreaGrid" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                                    <LinearColorKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="{ThemeResource ToggleSwitchContainerBackgroundPressed}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOn"
+                                                    Storyboard.TargetProperty="Width">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlFasterAnimationDuration}"
+                                                        Value="17" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOn"
+                                                    Storyboard.TargetProperty="Height">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlFasterAnimationDuration}"
+                                                        Value="14" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOff"
+                                                    Storyboard.TargetProperty="Width">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlFasterAnimationDuration}"
+                                                        Value="17" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOff"
+                                                    Storyboard.TargetProperty="Height">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlFasterAnimationDuration}"
+                                                        Value="14" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+
+                                        <VisualState x:Name="Disabled">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="HeaderContentPresenter" Storyboard.TargetProperty="Foreground">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchHeaderForegroundDisabled}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OffContentPresenter" Storyboard.TargetProperty="Foreground">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchContentForegroundDisabled}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OnContentPresenter" Storyboard.TargetProperty="Foreground">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchContentForegroundDisabled}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Stroke">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchStrokeOffDisabled}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Fill">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchFillOffDisabled}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobBounds" Storyboard.TargetProperty="Fill">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchFillOnDisabled}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobBounds" Storyboard.TargetProperty="Stroke">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchStrokeOnDisabled}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOff" Storyboard.TargetProperty="Fill">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchKnobFillOffDisabled}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOn" Storyboard.TargetProperty="Background">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ToggleSwitchKnobFillOnDisabled}" />
+                                                </ObjectAnimationUsingKeyFrames>
+                                                <ColorAnimationUsingKeyFrames Storyboard.TargetName="SwitchAreaGrid" Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)">
+                                                    <LinearColorKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="{ThemeResource ToggleSwitchContainerBackgroundDisabled}" />
+                                                </ColorAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOn"
+                                                    Storyboard.TargetProperty="Width">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlNormalAnimationDuration}"
+                                                        Value="12" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOn"
+                                                    Storyboard.TargetProperty="Height">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlNormalAnimationDuration}"
+                                                        Value="12" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOff"
+                                                    Storyboard.TargetProperty="Width">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlNormalAnimationDuration}"
+                                                        Value="12" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames
+                                                    EnableDependentAnimation="True"
+                                                    Storyboard.TargetName="SwitchKnobOff"
+                                                    Storyboard.TargetProperty="Height">
+                                                    <SplineDoubleKeyFrame
+                                                        KeySpline="{StaticResource ControlFastOutSlowInKeySpline}"
+                                                        KeyTime="{StaticResource ControlNormalAnimationDuration}"
+                                                        Value="12" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+
+                                    <VisualStateGroup x:Name="ToggleStates">
+                                        <VisualStateGroup.Transitions>
+                                            <VisualTransition
+                                                x:Name="DraggingToOnTransition"
+                                                GeneratedDuration="0"
+                                                From="Dragging"
+                                                To="On">
+                                                <Storyboard>
+                                                    <RepositionThemeAnimation FromHorizontalOffset="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.KnobCurrentToOnOffset}" TargetName="SwitchKnob" />
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobBounds" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="1" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="0" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOn" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="1" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOff" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="0" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualTransition>
+                                            <VisualTransition
+                                                x:Name="OnToDraggingTransition"
+                                                GeneratedDuration="0"
+                                                From="On"
+                                                To="Dragging">
+                                                <Storyboard>
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobBounds" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="0" Value="1" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOn" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="0" Value="1" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOff" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="0" Value="0" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualTransition>
+                                            <VisualTransition
+                                                x:Name="DraggingToOffTransition"
+                                                GeneratedDuration="0"
+                                                From="Dragging"
+                                                To="Off">
+
+                                                <Storyboard>
+                                                    <RepositionThemeAnimation FromHorizontalOffset="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.KnobCurrentToOffOffset}" TargetName="SwitchKnob" />
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobBounds" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="0" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOn" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="0" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOff" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="1" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualTransition>
+                                            <VisualTransition
+                                                x:Name="OnToOffTransition"
+                                                GeneratedDuration="0"
+                                                From="On"
+                                                To="Off">
+                                                <Storyboard>
+                                                    <RepositionThemeAnimation FromHorizontalOffset="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.KnobOnToOffOffset}" TargetName="SwitchKnob" />
+                                                </Storyboard>
+                                            </VisualTransition>
+                                            <VisualTransition
+                                                x:Name="OffToOnTransition"
+                                                GeneratedDuration="0"
+                                                From="Off"
+                                                To="On">
+                                                <Storyboard>
+                                                    <RepositionThemeAnimation FromHorizontalOffset="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.KnobOffToOnOffset}" TargetName="SwitchKnob" />
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobBounds" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="1" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="0" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOn" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="1" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOff" Storyboard.TargetProperty="Opacity">
+                                                        <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="0" />
+                                                    </DoubleAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualTransition>
+                                        </VisualStateGroup.Transitions>
+
+                                        <VisualState x:Name="Dragging" />
+
+                                        <VisualState x:Name="Off" />
+
+                                        <VisualState x:Name="On">
+                                            <Storyboard>
+                                                <DoubleAnimation
+                                                    Storyboard.TargetName="KnobTranslateTransform"
+                                                    Storyboard.TargetProperty="X"
+                                                    To="20"
+                                                    Duration="0" />
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobBounds" Storyboard.TargetProperty="Opacity">
+                                                    <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="1" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Opacity">
+                                                    <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="0" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOn" Storyboard.TargetProperty="Opacity">
+                                                    <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="1" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SwitchKnobOff" Storyboard.TargetProperty="Opacity">
+                                                    <LinearDoubleKeyFrame KeyTime="{StaticResource ControlFasterAnimationDuration}" Value="0" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+
+                                    <VisualStateGroup x:Name="ContentStates">
+                                        <VisualState x:Name="OffContent">
+                                            <Storyboard>
+                                                <DoubleAnimation
+                                                    Storyboard.TargetName="OffContentPresenter"
+                                                    Storyboard.TargetProperty="Opacity"
+                                                    To="1"
+                                                    Duration="0" />
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OffContentPresenter" Storyboard.TargetProperty="IsHitTestVisible">
+                                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                                        <DiscreteObjectKeyFrame.Value>
+                                                            <x:Boolean>True</x:Boolean>
+                                                        </DiscreteObjectKeyFrame.Value>
+                                                    </DiscreteObjectKeyFrame>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="OnContent">
+                                            <Storyboard>
+                                                <DoubleAnimation
+                                                    Storyboard.TargetName="OnContentPresenter"
+                                                    Storyboard.TargetProperty="Opacity"
+                                                    To="1"
+                                                    Duration="0" />
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OnContentPresenter" Storyboard.TargetProperty="IsHitTestVisible">
+                                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                                        <DiscreteObjectKeyFrame.Value>
+                                                            <x:Boolean>True</x:Boolean>
+                                                        </DiscreteObjectKeyFrame.Value>
+                                                    </DiscreteObjectKeyFrame>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <!--#endregion-->
 
             <!--#region Tooltip-->
             <SolidColorBrush x:Key="ToolTipBackgroundBrush" Color="{Binding Color, Source={ThemeResource BackgroundPopup}}" />
 
             <SolidColorBrush x:Key="ToolTipBorderBrush" Color="{Binding Color, Source={ThemeResource StrokePopup}}" />
 
-            <SolidColorBrush x:Key="ToolTipForegroundBrush" Color="{Binding Color, Source={ThemeResource TextPrimary}}" />
+            <SolidColorBrush x:Key="ToolTipForegroundBrush" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
             <!--#endregion-->
 
             <!--#endregion-->

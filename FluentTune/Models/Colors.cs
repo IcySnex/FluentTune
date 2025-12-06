@@ -6,7 +6,7 @@ public class Colors(
     ColorsAccent accent,
     ColorsBackground background,
     ColorsStroke stroke,
-    ColorsText text)
+    ColorsForeground foreground)
 {
     public static void Override(
         Colors target,
@@ -32,6 +32,10 @@ public class Colors(
         target.Background.ControlLow = source.Background.ControlLow;
         target.Background.ControlMedium = source.Background.ControlMedium;
         target.Background.ControlHigh = source.Background.ControlHigh;
+        target.Background.StatusNeutral = source.Background.StatusNeutral;
+        target.Background.StatusSuccess = source.Background.StatusSuccess;
+        target.Background.StatusCaution = source.Background.StatusCaution;
+        target.Background.StatusCritical = source.Background.StatusCritical;
 
         target.Stroke.Popup = source.Stroke.Popup;
         target.Stroke.Control = source.Stroke.Control;
@@ -39,14 +43,18 @@ public class Colors(
         target.Stroke.ControlMedium = source.Stroke.ControlMedium;
         target.Stroke.ControlHigh = source.Stroke.ControlHigh;
 
-        target.Text.Primary = source.Text.Primary;
-        target.Text.Secondary = source.Text.Secondary;
-        target.Text.Tertiary = source.Text.Tertiary;
-        target.Text.Quaternary = source.Text.Quaternary;
-        target.Text.OnAccentPrimary = source.Text.OnAccentPrimary;
-        target.Text.OnAccentSecondary = source.Text.OnAccentSecondary;
-        target.Text.OnAccentTertiary = source.Text.OnAccentTertiary;
-        target.Text.OnAccentQuaternary = source.Text.OnAccentQuaternary;
+        target.Foreground.Primary = source.Foreground.Primary;
+        target.Foreground.Secondary = source.Foreground.Secondary;
+        target.Foreground.Tertiary = source.Foreground.Tertiary;
+        target.Foreground.Quaternary = source.Foreground.Quaternary;
+        target.Foreground.OnAccentPrimary = source.Foreground.OnAccentPrimary;
+        target.Foreground.OnAccentSecondary = source.Foreground.OnAccentSecondary;
+        target.Foreground.OnAccentTertiary = source.Foreground.OnAccentTertiary;
+        target.Foreground.OnAccentQuaternary = source.Foreground.OnAccentQuaternary;
+        target.Foreground.StatusNeutral = source.Foreground.StatusNeutral;
+        target.Foreground.StatusSuccess = source.Foreground.StatusSuccess;
+        target.Foreground.StatusCaution = source.Foreground.StatusCaution;
+        target.Foreground.StatusCritical = source.Foreground.StatusCritical;
     }
 
 
@@ -68,14 +76,18 @@ public class Colors(
             control: "#0FFFFFFF",
             controlLow: "#08FFFFFF",
             controlMedium: "#15FFFFFF",
-            controlHigh: "#24FFFFFF"),
+            controlHigh: "#24FFFFFF",
+            statusNeutral: "#ff2e2e2e",
+            statusSuccess: "#ff393d1b",
+            statusCaution: "#ff433519",
+            statusCritical: "#ff442726"),
         stroke: new(
             popup: "#22000000",
             control: "#12FFFFFF",
             controlLow: "#17FFFFFF",
             controlMedium: "#23FFFFFF",
             controlHigh: "#28FFFFFF"),
-        text: new(
+        foreground: new(
             primary: "#FFFFFFFF",
             secondary: "#C5FFFFFF",
             tertiary: "#87FFFFFF",
@@ -83,14 +95,18 @@ public class Colors(
             onAccentPrimary: "#FF000000",
             onAccentSecondary: "#80000000",
             onAccentTertiary: "#83FFFFFF",
-            onAccentQuaternary: "#87FFFFFF"));
+            onAccentQuaternary: "#87FFFFFF",
+            statusNeutral: "#ff9d9d9d",
+            statusSuccess: "#ff6ccb5f",
+            statusCaution: "#fffce100",
+            statusCritical: "#ffff99a4"));
 
 
     public Colors() : this(
         accent: Dark.Accent,
         background: Dark.Background,
         stroke: Dark.Stroke,
-        text: Dark.Text)
+        foreground: Dark.Foreground)
     { }
 
 
@@ -100,7 +116,7 @@ public class Colors(
 
     public ColorsStroke Stroke { get; set; } = stroke;
 
-    public ColorsText Text { get; set; } = text;
+    public ColorsForeground Foreground { get; set; } = foreground;
 }
 
 
@@ -118,6 +134,7 @@ public partial class ColorsAccent(
     [ObservableProperty]
     string primary = primary;
 
+
     [ObservableProperty]
     string light1 = light1;
 
@@ -129,6 +146,7 @@ public partial class ColorsAccent(
 
     [ObservableProperty]
     string light4 = light4;
+
 
     [ObservableProperty]
     string dark1 = dark1;
@@ -149,7 +167,11 @@ public partial class ColorsBackground(
     string control,
     string controlLow,
     string controlMedium,
-    string controlHigh) : ObservableObject
+    string controlHigh,
+    string statusNeutral,
+    string statusSuccess,
+    string statusCaution,
+    string statusCritical) : ObservableObject
 {
     [ObservableProperty]
     string window = window;
@@ -170,6 +192,19 @@ public partial class ColorsBackground(
 
     [ObservableProperty]
     string controlHigh = controlHigh;
+
+
+    [ObservableProperty]
+    string statusNeutral = statusNeutral;
+
+    [ObservableProperty]
+    string statusSuccess = statusSuccess;
+
+    [ObservableProperty]
+    string statusCaution = statusCaution;
+
+    [ObservableProperty]
+    string statusCritical = statusCritical;
 }
 
 public partial class ColorsStroke(
@@ -196,7 +231,7 @@ public partial class ColorsStroke(
     string controlHigh = controlHigh;
 }
 
-public partial class ColorsText(
+public partial class ColorsForeground(
     string primary,
     string secondary,
     string tertiary,
@@ -204,7 +239,11 @@ public partial class ColorsText(
     string onAccentPrimary,
     string onAccentSecondary,
     string onAccentTertiary,
-    string onAccentQuaternary) : ObservableObject
+    string onAccentQuaternary,
+    string statusNeutral,
+    string statusSuccess,
+    string statusCaution,
+    string statusCritical) : ObservableObject
 {
     [ObservableProperty]
     string primary = primary;
@@ -218,6 +257,7 @@ public partial class ColorsText(
     [ObservableProperty]
     string quaternary = quaternary;
 
+
     [ObservableProperty]
     string onAccentPrimary = onAccentPrimary;
 
@@ -229,4 +269,17 @@ public partial class ColorsText(
 
     [ObservableProperty]
     string onAccentQuaternary = onAccentQuaternary;
+
+
+    [ObservableProperty]
+    string statusNeutral = statusNeutral;
+
+    [ObservableProperty]
+    string statusSuccess = statusSuccess;
+
+    [ObservableProperty]
+    string statusCaution = statusCaution;
+
+    [ObservableProperty]
+    string statusCritical = statusCritical;
 }
