@@ -338,23 +338,15 @@
             <!--  ComboBox & Menu  -->
             <StackPanel Spacing="8">
                 <TextBlock FontSize="20" Text="ComboBox &amp; Menu" />
-                <ComboBox Width="250">
+                <ComboBox
+                    Width="250"
+                    PlaceholderText="Haiii"
+                    SelectedIndex="3">
                     <ComboBoxItem Content="Item 1" />
                     <ComboBoxItem Content="Item 2" />
                     <ComboBoxItem Content="Item 3" />
+                    <ComboBoxItem Content="Item 4 (X)" IsEnabled="False" />
                 </ComboBox>
-                <MenuBar>
-                    <MenuBarItem Title="File">
-                        <MenuFlyoutItem Text="New" />
-                        <MenuFlyoutItem Text="Open" />
-                        <MenuFlyoutSeparator />
-                        <MenuFlyoutItem Text="Exit" />
-                    </MenuBarItem>
-                    <MenuBarItem Title="Edit">
-                        <MenuFlyoutItem Text="Copy" />
-                        <MenuFlyoutItem Text="Paste" />
-                    </MenuBarItem>
-                </MenuBar>
             </StackPanel>
 
 

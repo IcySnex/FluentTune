@@ -72,7 +72,7 @@ public class Colors(
             dark4: "#FF872D35"),
         background: new(
             window: "#00000000",
-            popup: "#ff2c2c2c",
+            popup: "#ff323232",
             control: "#0FFFFFFF",
             controlLow: "#08FFFFFF",
             controlMedium: "#15FFFFFF",

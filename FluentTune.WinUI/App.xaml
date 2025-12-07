@@ -1226,6 +1226,89 @@
             </Style>
             <!--#endregion-->
 
+            <!--#region ComboBox-->
+            <SolidColorBrush x:Key="ComboBoxBackground" Color="{Binding Color, Source={ThemeResource BackgroundControl}}" />
+            <SolidColorBrush x:Key="ComboBoxBackgroundPointerOver" Color="{Binding Color, Source={ThemeResource BackgroundControlMedium}}" />
+            <SolidColorBrush x:Key="ComboBoxBackgroundPressed" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="ComboBoxBackgroundDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+
+            <SolidColorBrush x:Key="ComboBoxBorderBrush" Color="{Binding Color, Source={ThemeResource StrokeControl}}" />
+            <SolidColorBrush x:Key="ComboBoxBorderBrushPointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+            <SolidColorBrush x:Key="ComboBoxBorderBrushPressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+            <SolidColorBrush x:Key="ComboBoxBorderBrushDisabled" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+
+            <SolidColorBrush x:Key="ComboBoxForeground" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ComboBoxForegroundPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ComboBoxForegroundPressed" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="ComboBoxForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+            <SolidColorBrush x:Key="ComboBoxForegroundFocused" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ComboBoxForegroundFocusedPressed" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+
+            <SolidColorBrush x:Key="ComboBoxDropDownGlyphForeground" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="ComboBoxDropDownGlyphForegroundPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="ComboBoxDropDownGlyphForegroundPressed" Color="{Binding Color, Source={ThemeResource ForegroundTertiary}}" />
+            <SolidColorBrush x:Key="ComboBoxDropDownGlyphForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+            <SolidColorBrush x:Key="ComboBoxDropDownGlyphForegroundFocused" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="ComboBoxDropDownGlyphForegroundFocusedPressed" Color="{Binding Color, Source={ThemeResource ForegroundTertiary}}" />
+            <SolidColorBrush x:Key="ComboBoxEditableDropDownGlyphForeground" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+
+            <SolidColorBrush x:Key="ComboBoxPlaceHolderForeground" Color="{Binding Color, Source={ThemeResource ForegroundTertiary}}" />
+            <SolidColorBrush x:Key="ComboBoxPlaceHolderForegroundPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundTertiary}}" />
+            <SolidColorBrush x:Key="ComboBoxPlaceHolderForegroundPressed" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+            <SolidColorBrush x:Key="ComboBoxPlaceHolderForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+            <SolidColorBrush x:Key="ComboBoxPlaceHolderForegroundFocused" Color="{Binding Color, Source={ThemeResource ForegroundTertiary}}" />
+            <SolidColorBrush x:Key="ComboBoxPlaceHolderForegroundFocusedPressed" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+
+            <SolidColorBrush x:Key="ComboBoxItemPillFillBrush" Color="{Binding Color, Source={ThemeResource AccentLight3}}" />
+
+            <SolidColorBrush x:Key="ComboBoxHeaderForeground" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="ComboBoxHeaderForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+
+            <!--#region Item-->
+            <SolidColorBrush x:Key="ComboBoxItemBackground" Color="Transparent" />
+            <SolidColorBrush x:Key="ComboBoxItemBackgroundPointerOver" Color="{Binding Color, Source={ThemeResource BackgroundControl}}" />
+            <SolidColorBrush x:Key="ComboBoxItemBackgroundPressed" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="ComboBoxItemBackgroundDisabled" Color="Transparent" />
+            <SolidColorBrush x:Key="ComboBoxItemBackgroundSelected" Color="{Binding Color, Source={ThemeResource BackgroundControl}}" />
+            <SolidColorBrush x:Key="ComboBoxItemBackgroundSelectedUnfocused" Color="{Binding Color, Source={ThemeResource BackgroundControl}}" />
+            <SolidColorBrush x:Key="ComboBoxItemBackgroundSelectedPointerOver" Color="{Binding Color, Source={ThemeResource BackgroundControlLow}}" />
+            <SolidColorBrush x:Key="ComboBoxItemBackgroundSelectedPressed" Color="{Binding Color, Source={ThemeResource BackgroundControlMedium}}" />
+            <SolidColorBrush x:Key="ComboBoxItemBackgroundSelectedDisabled" Color="{Binding Color, Source={ThemeResource BackgroundControlMedium}}" />
+
+            <SolidColorBrush x:Key="ComboBoxItemBorderBrush" Color="Transparent" />
+            <SolidColorBrush x:Key="ComboBoxItemBorderBrushPointerOver" Color="{Binding Color, Source={ThemeResource StrokeControl}}" />
+            <SolidColorBrush x:Key="ComboBoxItemBorderBrushPressed" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+            <SolidColorBrush x:Key="ComboBoxItemBorderBrushDisabled" Color="Transparent" />
+            <SolidColorBrush x:Key="ComboBoxItemBorderBrushSelected" Color="{Binding Color, Source={ThemeResource StrokeControl}}" />
+            <SolidColorBrush x:Key="ComboBoxItemBorderBrushSelectedUnfocused" Color="{Binding Color, Source={ThemeResource StrokeControl}}" />
+            <SolidColorBrush x:Key="ComboBoxItemBorderBrushSelectedPointerOver" Color="{Binding Color, Source={ThemeResource StrokeControlLow}}" />
+            <SolidColorBrush x:Key="ComboBoxItemBorderBrushSelectedPressed" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+            <SolidColorBrush x:Key="ComboBoxItemBorderBrushSelectedDisabled" Color="{Binding Color, Source={ThemeResource StrokeControlMedium}}" />
+
+            <SolidColorBrush x:Key="ComboBoxItemForeground" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ComboBoxItemForegroundPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ComboBoxItemForegroundPressed" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="ComboBoxItemForegroundDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+            <SolidColorBrush x:Key="ComboBoxItemForegroundSelected" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ComboBoxItemForegroundSelectedUnfocused" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ComboBoxItemForegroundSelectedPointerOver" Color="{Binding Color, Source={ThemeResource ForegroundPrimary}}" />
+            <SolidColorBrush x:Key="ComboBoxItemForegroundSelectedPressed" Color="{Binding Color, Source={ThemeResource ForegroundSecondary}}" />
+            <SolidColorBrush x:Key="ComboBoxItemForegroundSelectedDisabled" Color="{Binding Color, Source={ThemeResource ForegroundQuaternary}}" />
+            <!--#endregion-->
+
+            <!--#region DropDown-->
+            <AcrylicBrush
+                x:Key="ComboBoxDropDownBackground"
+                FallbackColor="{Binding Color, Source={ThemeResource BackgroundPopup}}"
+                TintColor="{Binding Color, Source={ThemeResource BackgroundPopup}}"
+                TintOpacity="0.15" />
+
+            <SolidColorBrush x:Key="ComboBoxDropDownBorderBrush" Color="{Binding Color, Source={ThemeResource StrokePopup}}" />
+            <!--#endregion-->
+
+            <!--#endregion-->
+
+
             <!--#region Tooltip-->
             <SolidColorBrush x:Key="ToolTipBackgroundBrush" Color="{Binding Color, Source={ThemeResource BackgroundPopup}}" />
 
